@@ -1514,5 +1514,5 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
     padding-bottom: 0;
 }
 img[src ~="baidu"]{
-    /*display: none;*/
+    display: none;
 }
