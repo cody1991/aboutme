@@ -1513,6 +1513,6 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 .comments h4 {
     padding-bottom: 0;
 }
-img[src ~="baidu"]{
+img[src*="baidu"]{
     display: none;
 }
