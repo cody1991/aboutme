@@ -1,0 +1,1734 @@
+
+/* ------------------------------------------------------------------------------
+
+	Template Name: Folix
+	Template URI: http://http://www.themeelite.com/folix
+	Description: Full Screen Coming Soon Template
+	Author: Andy
+	Author URI: http://www.themeelite.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+	
+	1.  CSS Reset
+	2.	Document Setup
+	3.	Header Part
+		3.1 Slide show background control
+	4.  Background slider CSS style
+	5.	Menu Style
+	6.	About me Style
+	7.	Technical Skills Style
+	8.	Work Experience Style
+	9.	Education Style
+	10. Protfolio Style
+	11. Get in tuch Style
+	12. Footer Style
+	13. Responsive style
+		
+		
+---------------------------------------------------------------------------------
+/* 1. CSS Reset
+-------------------------------------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+/*----------------------------------------------------
+ 2.	Document Setup
+------------------------------------------------------*/
+.wrapper {
+    width: 100%;
+}
+
+.spHeight {
+    padding-top: 63px;
+}
+
+.noMar {
+    margin: 0 !important;
+}
+
+.noPadd {
+    padding: 0px !important;
+}
+
+.container .row {
+    margin: 0px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-bottom: 38px;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 700;
+    margin: 0px;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    padding-bottom: 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px;
+    border-bottom: #ef7674 6px solid;
+    padding-bottom: 9px;
+    display: inline-block;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 3px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+    padding-bottom: 6px;
+    font-weight: 600;
+    margin: 0px;
+    color: #5b4c5c;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h4.subHeading {
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.topmar {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 960px;
+	/*padding:0;*/
+}
+/*----------------------------------------------------
+ 3.	Header Part
+------------------------------------------------------*/
+header {
+    position: relative;
+}
+
+.banner {
+    overflow: hidden;
+    margin: 0 auto !important;
+    background: #CACACA;
+}
+
+.bannerText {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    text-align: center;
+    padding: 30px 0 30px;
+    max-width: 960px;
+    z-index: 999999;
+    animation-name: textBox;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+	/* Safari and Chrome: */
+    -webkit-animation-name: textBox;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.bannerText p {
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 42px;
+}
+
+.mbnt {
+    display: inline-block;
+    line-height: 52px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #EF7674;
+    text-transform: uppercase;
+    padding: 0 29px;
+}
+
+.mbnt:hover {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.bannerText h1 {
+    text-transform: uppercase;
+}
+
+.bannerText h2 {
+    font-size: 34px;
+    text-transform: none;
+}
+/*------------------------------------
+	3.1 Slide show background control
+--------------------------------------*/ 
+.cb-slideshow {
+    background: #1b1f2b;
+}
+
+.cb-slideshow li {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+ /* For IE8 and earlier */
+}
+/*---------------------------------------------------------------------------------
+ 4. Background slider CSS style
+-------------------------------------------------------------------------------*/
+.ri-grid {
+    margin: 0px auto;
+    position: relative;
+    height: auto;
+}
+
+.ri-grid ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ri-grid ul:before, .ri-grid ul:after {
+    content: '';
+    display: table;
+}
+
+.ri-grid ul:after {
+    clear: both;
+}
+
+.ri-grid ul {
+    zoom: 1;
+ /* For IE 6/7 (trigger hasLayout) */
+}
+
+.ri-grid ul li {
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -o-perspective: 400px;
+    -ms-perspective: 400px;
+    perspective: 400px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #000;
+}
+
+.ri-grid ul li a {
+    display: block;
+    outline: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/* Grid wrapper sizes */
+.ri-grid-size-1 {
+    width: 55%;
+}
+
+.ri-grid-size-2 {
+    width: 100%;
+}
+
+.ri-grid-size-3 {
+    width: 100%;
+    margin-top: 0px;
+}
+/* Shadow style */
+.ri-shadow:after, .ri-shadow:before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    max-height: 100px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.ri-shadow:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.ri-grid-loading:after, .ri-grid-loading:before {
+    display: none;
+}
+
+.ri-loading-image {
+    display: none;
+}
+
+.ri-grid-loading .ri-loading-image {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin: 100px 0 0 -15px;
+    display: block;
+}
+/*----------------------------------------------------
+ 5.	Menu Style
+------------------------------------------------------*/
+.isStuck {
+    left: 0px;
+    width: 100%;
+}
+
+.menu {
+    margin-top: 0px;
+    position: static;
+    left: 0px;
+    right: 0px;
+}
+
+.navwrapper .container {
+    padding: 0;
+    width: auto;
+}
+
+.navbar-header {
+    display: none;
+}
+
+.nav > li > a {
+    display: inline-block;
+}
+
+.navbar-nav > li {
+    float: none;
+    display: inline;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+}
+
+.navbar-toggle {
+    margin-top: 8px;
+    background-color: #4c404d;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+}
+
+.navbar-brand {
+    margin-top: 4px;
+}
+
+.nav .menuItem a {
+    font-size: 19px;
+}
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    margin-top: 0px;
+    position: relative;
+    z-index: 15;
+    background: #ffffff;
+}
+
+.navbar-wrapper .container {
+    padding: 0px;
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+.navbar-collapse.in {
+    max-height: 100%;
+}
+
+.navbar.navbar-inverse.navbar-static-top {
+    margin: 0px auto;
+    background: #ffffff;
+    color: #4c404d;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar.navbar-inverse.navbar-static-top a.navbar-brand {
+    line-height: 43px;
+}
+
+.navbar.navbar-inverse.navbar-static-top a {
+    color: #4c404d;
+    padding: 0 26px;
+    line-height: 140px;
+    text-align: center;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.navbar.navbar-inverse.navbar-static-top .nav li.first {
+    padding-left: 0;
+}
+
+.navbar.navbar-inverse.navbar-static-top .nav li {
+    padding: 0 0 0 36px;
+}
+
+.navbar.navbar-inverse.navbar-static-top .nav li a {
+    padding: 0;
+    letter-spacing: -1px;
+}
+
+.navbar.navbar-inverse.navbar-static-top a:hover {
+    background: #ffffff;
+    color: #ef7674;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
+    background: #ffffff;
+	/*color:#c3c8d6;*/
+    color: #ef7674;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    background: #ffffff;
+	/*color:#c3c8d6;*/
+    color: #ef7674;
+}
+
+.navbar-inverse .navbar-nav>.active>a:hover {
+	/*background:#1b1f29;*/
+	/*color:#fff;*/
+    background: #ffffff;
+    color: #ef7674;
+}
+
+.hideClass {
+    display: none;
+}
+
+.carousel {
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 600px;
+    background-color: #0A64A4;
+}
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+/*----------------------------------------------------
+ 6.	About me Style
+------------------------------------------------------*/
+
+.aboutme {
+    background: #f3f2f3;
+    color: #897f8a;
+    position: relative;
+}
+
+.aboutme .container {
+    padding-top: 85px;
+    padding-bottom: 93px;
+}
+
+.aboutTop {
+    background: #00bdbd;
+    height: 60px;
+}
+
+.spHeight .aboutTop {
+    margin-top: -62px !important;
+}
+
+.aboutCont {
+    padding-bottom: 78px;
+    padding-left: 48px;
+}
+
+.aboutme .proPic img {
+    min-width: 100%;
+    min-height: 100% !important;
+    height: 650px;
+	/*width:auto;
+	height:auto;
+	display:block;*/
+}
+
+.aboutme .proPic {
+    position: relative;
+    z-index: 1;
+    max-height: 650px !important;
+    overflow: hidden;
+}
+
+#description {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 50px;
+    margin-bottom: 60px;
+}
+
+#description .ps-scrollbar-x-rail {
+    display: none !important;
+}
+
+.aboutme .proPic:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background: url(../images/me.jpg) no-repeat 50% 50%;
+    min-height: 100%;
+    min-width: 100%;
+    background-size: cover;
+}
+
+.bntDownload {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border: 3px solid #5b4c5c;
+    padding: 16px 22px;
+    display: inline-block;
+    color: #5b4c5c;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.bntDownload:hover {
+    background: #5b4c5c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.aboutme .heading {
+    text-align: left;
+    padding-top: 78px;
+    padding-bottom: 26px;
+}
+
+.aboutme .heading h2 {
+    color: #5b4c5c;
+    display: inline-block;
+}
+
+.aboutme h3 {
+    color: #5b4c5c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.aboutme .subHeading {
+    font-size: 18px;
+}
+/*----------------------------------------------------
+ 7.	Technical Skills Style
+------------------------------------------------------*/
+.addspace {
+    height: 60px;
+    background: #eeeeee;
+}
+
+.technical {
+	/*background:#eeeeee;
+	color:#474d5d;*/
+}
+
+.technical .container {
+    padding-top: 117px;
+    padding-bottom: 100px;
+}
+
+.technical .heading p {
+    padding-bottom: 41px;
+    max-width: 660px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.technical p {
+    color: #897f8a;
+}
+
+.technical h2 {
+    color: #5b4c5c;
+    margin-bottom: 49px;
+}
+
+.technical .skillsArea {
+    padding: 0px;
+}
+
+.technical .skills {
+    margin: 0 auto;
+    margin-bottom: 23px;
+    text-align: center;
+    padding: 0px;
+    float: none;
+}
+
+.technical .skills p {
+    color: #897f8a;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.technical .skills p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.technical .skills img {
+    margin: 0 auto;
+    margin-bottom: 33px;
+    width: 100%;
+    max-width: 152px;
+}
+
+.technical .skills h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 27px;
+    padding-bottom: 11px;
+    color: #5b4c5c;
+}
+
+.skilBg {
+	/*background:url(../images/skills.png) no-repeat 0 0;*/
+}
+
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 118px;
+    height: 118px;
+    margin-bottom: 19px;
+    text-align: center;
+}
+
+.chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.percent {
+    display: inline-block;
+    font-size: 21px;
+    color: #5b4c5c;
+    line-height: 118px;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: .8em;
+}
+
+.angular {
+    margin-top: 100px;
+}
+
+.angular .chart {
+    margin-top: 0;
+}
+/*----------------------------------------------------
+ 8.	Work Experience Style
+------------------------------------------------------*/
+.exprience {
+    background: #f8f7f8;
+}
+
+.exprience .container {
+    padding-top: 116px;
+    padding-bottom: 120px;
+}
+
+.exprience h2 {
+    color: #5b4c5c;
+    margin-bottom: 41px;
+}
+
+.exprience p {
+    color: #84868d;
+	/*font-size:13px;*/
+    line-height: 18px;
+}
+
+.exprience .heading p {
+    padding-bottom: 54px;
+    max-width: 660px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color: #897f8a;
+    line-height: 27px;
+}
+
+.exprience h4 {
+    font-weight: 700;
+}
+
+.workDetails .rightArea {
+    border-left: dashed 1px #897f8a;
+    padding-bottom: 47px;
+}
+
+.workDetails:last-child .rightArea {
+    padding-bottom: 0px;
+}
+
+.workDetails:last-child .rightArea .exCon p:last-child {
+    padding-bottom: 0;
+}
+
+.workYear {
+    font-size: 17px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.workYear span {
+    display: block;
+    font-size: 18pxpx;
+    padding: 0 21px;
+    white-space: nowrap;
+    float: right;
+    margin-bottom: 2px;
+    margin-right: 28px;
+    font-weight: bold;
+}
+
+.prevY {
+    background-color: #ef7674;
+}
+
+.afterY {
+    background-color: #483c49;
+}
+
+.arrowpart {
+    margin-left: -26px;
+    margin-top: 32px;
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url(../images/arrow-left.png) no-repeat 0 0 #f8f7f8;
+}
+
+.exCon {
+    width: auto;
+    padding: 0 47px 6px 70px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.exCon p {
+    color: #897f8a;
+    line-height: 27px;
+}
+
+.exCon h4 {
+    color: #5b4c5c;
+    padding-bottom: 1px;
+    margin-top: -8px;
+}
+
+.exCon h5 {
+    color: #5b4c5c;
+    padding-bottom: 11px;
+}
+/*----------------------------------------------------
+ 9.	Education Style
+------------------------------------------------------*/
+.education {
+    background: #ffffff;
+}
+
+.education .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.education h2 {
+    color: #5b4c5c;
+    margin-bottom: 45px;
+}
+
+.education p {
+    color: #897f8a;
+	/*font-size:13px;*/
+    line-height: 27px;
+}
+
+.education .heading p {
+    padding-bottom: 54px;
+    max-width: 660px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    line-height: 27px;
+}
+
+.education h4 {
+    font-weight: 700;
+}
+
+.education .arrowpart {
+    margin-left: -26px;
+    margin-top: 32px;
+    float: left;
+    width: 22px;
+    height: 22px;
+    background: url(../images/arrow-left.png) no-repeat 0 0 #ffffff;
+}
+
+.education .exCon {
+}
+
+.education .workDetails .rightArea {
+    border-left-color: #897f8a;
+}
+/*----------------------------------------------------
+ 10. Protfolio Style
+------------------------------------------------------*/
+.protfolio {
+    margin-bottom: -10px;
+}
+
+.protfolio .container {
+    padding-top: 85px;
+    padding-bottom: 90px;
+}
+
+.protfolio .heading h2 {
+    margin-bottom: 49px;
+}
+
+.protfolio .heading {
+    padding-bottom: 60px;
+}
+
+.protfolio .heading p {
+    padding-bottom: 41px;
+    margin: 0 auto;
+    max-width: 660px;
+    text-align: center;
+}
+
+.portfolioTop {
+    padding-bottom: 62px;
+}
+
+.protfolio h4 {
+    font-weight: 700;
+}
+
+.portfolioTop {
+    background-color: #3b323c;
+    padding: 123px 0 0;
+}
+
+.portfolioFilter {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolioFilter ul {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.portfolioFilter ul li {
+    display: inline-block;
+    margin: 5px 16px;
+}
+
+.portfolioFilter ul li a {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #908691;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.portfolioFilter ul li a:hover {
+    color: #f3f2f3;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.portfolioFilter ul li a.current {
+    color: #f3f2f3;
+}
+
+ul.portfolioContainer {
+    display: block;
+    padding: 0px;
+    list-style-type: none;
+}
+
+ul.portfolioContainer li {
+    display: block;
+    min-height: 90px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    width: 24.8%;
+}
+
+ul.portfolioContainer li .lightCon {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+ul.portfolioContainer li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+span.hoverBox {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+ul.portfolioContainer li:hover span.hoverBox {
+    visibility: visible;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(238, 124, 123, 0.8);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+span.hoverBox a {
+    line-height: 42px;
+}
+
+span.hoverBox .smallIcon {
+    width: 94px;
+    margin: 0px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -47px;
+    margin-top: -21px;
+}
+
+span.hoverBox .zoom {
+    visibility: hidden;
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    color: #000000;
+    position: relative;
+    left: -150%;
+	/*top:40%;*/
+    text-align: center;
+    line-height: 64px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    margin-left: -10px;
+}
+
+ul.portfolioContainer li:hover span.hoverBox .zoom {
+    visibility: visible;
+    left: 0;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+span.hoverBox .linKed {
+    visibility: hidden;
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    color: #000000;
+    position: relative;
+    right: -150%;
+	/*top:40%;*/
+    text-align: center;
+    line-height: 67px;
+    display: block;
+    float: right;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    margin-right: -10px;
+}
+
+ul.portfolioContainer li:hover span.hoverBox .linKed {
+    visibility: visible;
+    right: 0%;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.pp_overlay:after {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.isotope-item {
+    z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope, .isotope .isotope-item {
+	/* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    padding: 0;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.abc {
+    position: absolute;
+    width: 782px;
+    height: auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    margin: 0 auto;
+}
+
+.abc #pbImage {
+    position: static !important;
+}
+
+#pbCaption {
+    display: block;
+    background: none !important;
+}
+
+#pbBottom {
+    position: relative !important;
+    left: 26.1% !important;
+    bottom: 0px !important;
+    width: 100% !important;
+    margin-left: -26% !important;
+    padding: 0px !important;
+    height: 80px !important;
+    display: block;
+    background-color: rgba(24, 27, 34, 1);
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#B0000000, EndColorStr=#B0000000);
+}
+
+#pbCloseBtn {
+    position: absolute !important;
+}
+/*----------------------------------------------------
+ 14. Reffernces Style
+------------------------------------------------------*/
+.reffernces {
+    background: #f8f7f8;
+}
+
+.reffernces .container {
+    padding-bottom: 123px;
+    padding-top: 123px;
+}
+
+.reffernces h2 {
+    color: #5b4c5c;
+    margin-bottom: 49px;
+}
+
+.reffernces .heading p {
+    padding-bottom: 41px;
+    max-width: 660px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.reffernces p {
+    color: #897f8a
+}
+
+.refBox {
+    margin-bottom: 18px;
+}
+
+.refBoxcon {
+    background: #FFF;
+    padding: 50px 34px 41px;
+    border-bottom: #e6e6e6 5px solid;
+}
+
+.refBoxcon p {
+    color: #897f8a;
+    font-size: 15px;
+    line-height: 27px;
+    padding-bottom: 38px;
+}
+
+.refBoxcon h3 {
+    color: #4c404d;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.refBoxcon h4 {
+    color: #4c404d;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.refBox {
+    padding: 0 10px;
+}
+/*----------------------------------------------------
+ 11. Get in tuch Style
+------------------------------------------------------*/
+
+.contact {
+    background: #fff;
+}
+
+.contact .container {
+    padding-top: 123px;
+    padding-bottom: 90px;
+}
+
+.contact h2 {
+    color: #5b4c5c;
+    margin-bottom: 45px;
+}
+
+.contact .heading p {
+    display: block;
+    margin: 0 auto;
+    max-width: 660px;
+    padding-bottom: 41px;
+    text-align: center;
+}
+
+.contact p {
+    color: #84868d;
+	/*font-size:13px;*/
+    line-height: 18px;
+}
+
+.contact .heading p {
+    padding-bottom: 41px;
+    line-height: 27px;
+    color: #897f8a;
+}
+
+.contact h4 {
+    font-weight: 700;
+}
+
+.topCon {
+    padding-bottom: 0px !important;
+}
+
+.mapArea {
+    height: 302px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+.mapArea iframe {
+    width: 100%;
+    height: 396px;
+    padding-bottom: 4px;
+    background: url(../images/map-bro.png) repeat-x 0 100%;
+}
+
+.contactDetails {
+    background: #ffffff;
+}
+
+.contactDetails .container {
+    padding-top: 15px;
+    padding-bottom: 120px;
+}
+
+.contactDetails h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.contactDetails p {
+    color: #897f8a;
+    font-size: 15px;
+    line-height: 19px;
+    padding-bottom: 14px;
+}
+
+.contactDetails p a {
+    color: #897f8a;
+}
+
+.contactDetails p a:hover {
+    color: #5b4c5c;
+    text-decoration: none;
+}
+
+.contactDetails i {
+    padding-right: 15px;
+}
+
+.conForm input {
+    background: #ffffff;
+    color: #897f8a;
+    padding: 15px 30px;
+    border: none;
+    margin-right: 3%;
+    margin-bottom: 18px;
+    outline: none;
+    font-style: normal;
+    border: #cdc9ce 1px solid;
+    font-size: 15px;
+}
+
+.conForm input.noMarr {
+    margin-right: 0px;
+}
+
+.conForm textarea {
+    background: #ffffff;
+    color: #897f8a;
+    padding: 15px 30px;
+    margin-bottom: 18px;
+    outline: none;
+    height: 100px;
+    font-style: normal;
+    resize: none;
+    font-size: 15px;
+    border: #cdc9ce 1px solid;
+}
+
+.conForm .submitBnt {
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    color: #5b4c5c;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    float: right;
+    margin: 0px;
+    width: 135px;
+    height: 45px;
+    line-height: 40px;
+    padding: 0;
+    border: #5b4c5c 3px solid;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.conForm .submitBnt:hover {
+    background: #5b4c5c;
+    color: #ffffff;
+}
+
+.textGroup {
+    position: relative !important;
+    display: inline-block;
+    padding-left: 0px !important;
+}
+
+#success_page {
+    color: #00bdbd;
+    font-weight: 500;
+}
+
+.error_message {
+    color: #5b4c5c;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+#success_page h3 {
+    font-size: 17px;
+}
+/*----------------------------------------------------
+ 12. Footer Style
+------------------------------------------------------*/
+.footer {
+    background: #3b323c;
+}
+
+.footer .container {
+    padding: 115px 0 125px;
+    position: relative;
+}
+
+.footer ul {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    text-align: center;
+    background: #ffffff;
+    color: #3b323c;
+    line-height: 42px;
+    margin: 0 6px;
+    width: 51px !important;
+    height: 51px !important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.footer ul li:hover {
+    background: #282429;
+}
+
+.footer ul li:hover a {
+    color: #fff;
+}
+
+.footer ul li a {
+    color: #3b323c;
+    width: 51px !important;
+    height: 51px !important;
+}
+
+.footer ul li a i {
+    line-height: 52px !important;
+}
+
+.totop {
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #302931;
+    color: #817a82;
+    line-height: 42px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -21px;
+    cursor: pointer;
+    text-align: center;
+}
+
+	
+/*---------------------------------------------------------------------------------
+ 13. Responsive style
+-------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1200px) {
+    .workYear {
+ /*width:140px;
+ height:140px;
+ padding-top:50px;*/
+    }
+
+    .education .workYear {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .navbar.navbar-inverse.navbar-static-top .nav li {
+        padding-left: 25px;
+    }
+
+    .navbar.navbar-inverse.navbar-static-top a {
+        line-height: 140px;
+    }
+
+    .nav .menuItem a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar.navbar-inverse.navbar-static-top a {
+/* padding-left:12px;
+ padding-right:12px;
+ font-size:12px;*/
+    }
+
+    .bannerText {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .bannerText h1 {
+        font-size: 65px;
+        line-height: 71px;
+    }
+
+    .bannerText h2 {
+        font-size: 28px;
+    }
+
+    .proPic {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    body {
+        min-height: 700px;
+    }
+
+    #header h3 {
+        font-size: 38px;
+    }
+
+    #header h3 span {
+        font-size: 16px;
+    }
+
+    .abc {
+        width: 100%;
+    }
+
+    .navbar.navbar-inverse.navbar-static-top a {
+/* padding-left: 17px;*/
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .aboutme {
+        padding: 15px;
+    }
+
+    .proPic img {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .conForm input.col-sm-6 {
+        width: 48.5%;
+    }
+
+    .conForm input.col-lg-6 {
+        width: 48.5%;
+    }
+
+    .aboutme {
+	/*padding:15px;*/
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-wrapper .container,  .navwrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    ul.portfolioContainer li.col-xs-6 {
+        width: 49%;
+        min-height: 85px;
+    }
+
+    .navbar.navbar-inverse.navbar-static-top a {
+        line-height: 43px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-header {
+        display: block;
+    }
+
+    .workYear {
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+
+    .workYear span {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .workDetails .rightArea {
+        border-left: none;
+    }
+
+    .arrowpart {
+/* float:none;
+ width:100%;
+ height:40px;
+ background:url(../images/arrow-top.png) no-repeat 50% 100%;*/
+        background: none;
+    }
+
+    .education .arrowpart {
+        background: url(../images/arrow-top-light.png) no-repeat 50% 100%;
+    }
+
+    .exCon {
+        margin-left: 0px;
+        padding: 0;
+    }
+
+    ul.navbar-nav li a {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #wrapper {
+        top: 200px !important;
+    }
+
+    .upbox {
+        transform: translate(0px, -70px);
+        -ms-transform: translate(0px, -70px);
+ /* IE 9 */
+        -webkit-transform: translate(0px, -70px);
+ /* Safari and Chrome */
+    }
+
+    .bannerText {
+        top: 25%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .bannerText h1 {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .bannerText h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar.navbar-inverse.navbar-static-top a {
+        line-height: 17px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+
+    .navbar.navbar-inverse.navbar-static-top a.navbar-brand {
+        line-height: 22px;
+    }
+
+    .bannerText {
+        top: 10%;
+    }
+
+    .bannerText h1 {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    .bannerText p {
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #loopedSlider, #newsSlider {
+        min-height: 650px;
+        height: 100%;
+    }
+
+    ul.slides {
+        min-height: 600px;
+        height: 100%;
+    }
+
+    .item {
+        width: 19%;
+    }
+
+    .item p {
+        font-size: 36px;
+    }
+
+    .aboutme img {
+        width: 100%;
+    }
+
+    ul.portfolioContainer li.col-xs-6 {
+        width: 100%;
+    }
+
+    .bntDownload {
+        font-size: 13px;
+        padding: 16px 14px;
+    }
+
+    .conForm textarea {
+        margin-bottom: 20px;
+    }
+
+    .textGroup {
+        display: block;
+        padding: 0 0 40px 0;
+    }
+
+    .nameError,  .emailError {
+        left: 0px;
+        top: 0px;
+    }
+}
+ 
