@@ -94,7 +94,7 @@
                     var topMax = 100;
                 }
                 else{
-                	topMax = 1000;
+                	topMax = 1500;
                 }
                 if (top < topMax) {
                     if (index == 0) {

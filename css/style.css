@@ -156,7 +156,7 @@ header {
     text-align: center;
     padding: 30px 0 30px;
     max-width: 960px;
-    z-index: 999999;
+    z-index: 2;
     animation-name: textBox;
     animation-duration: 5s;
     animation-timing-function: linear;
@@ -585,7 +585,7 @@ header {
     display: block;
     margin: 0 auto;
 }
-.technical .heading p a{
+.technical .heading p a {
     text-decoration: underline;
     color: #ef7674;
 }
@@ -917,40 +917,31 @@ ul.portfolioContainer li:hover span.hoverBox {
 span.hoverBox a {
     line-height: 42px;
 }
+span.hoverBox .title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transform: translateY(-1000px);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+ul.portfolioContainer li:hover span.hoverBox .title {
+    -webkit-transform: translateY(0);
+}
 span.hoverBox .smallIcon {
-    width: 94px;
+    width: 56px;
+    height: 56px;
     margin: 0px auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -47px;
-    margin-top: -21px;
-}
-span.hoverBox .zoom {
-    visibility: hidden;
-    width: 56px;
-    height: 56px;
-    background: #ffffff;
-    color: #000000;
-    position: relative;
-    left: -150%;
-    /*top:40%;*/
-    
-    text-align: center;
-    line-height: 64px;
-    display: block;
-    float: left;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-    margin-left: -10px;
-}
-ul.portfolioContainer li:hover span.hoverBox .zoom {
-    visibility: visible;
-    left: 0;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    margin-left: -28px;
+    margin-top: -28px;
 }
 span.hoverBox .linKed {
     visibility: hidden;
@@ -959,9 +950,7 @@ span.hoverBox .linKed {
     background: #ffffff;
     color: #000000;
     position: relative;
-    right: -150%;
-    /*top:40%;*/
-    
+    top: 1000%;
     text-align: center;
     line-height: 67px;
     display: block;
@@ -970,11 +959,10 @@ span.hoverBox .linKed {
     -moz-border-radius: 50%;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
-    margin-right: -10px;
 }
 ul.portfolioContainer li:hover span.hoverBox .linKed {
     visibility: visible;
-    right: 0%;
+    top: 0;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
 }
@@ -1085,9 +1073,14 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
     padding-bottom: 38px;
 }
 .refBoxcon h3 {
+    text-align: right;
     color: #4c404d;
     font-size: 18px;
     font-weight: bold;
+}
+.refBoxcon h3 a {
+    text-decoration: underline;
+    color: #ef7674;
 }
 .refBoxcon h4 {
     color: #4c404d;
