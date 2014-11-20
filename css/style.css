@@ -1098,7 +1098,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
     background: #fff;
 }
 .contact .container {
-    padding-top: 123px;
+    padding-top: 50px;
     padding-bottom: 90px;
 }
 .contact h2 {
@@ -1146,7 +1146,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 .contactDetails .container {
     padding-top: 15px;
-    padding-bottom: 120px;
+    padding-bottom: 30px;
 }
 .contactDetails h4 {
     font-weight: 600;
@@ -1503,4 +1503,13 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
         left: 0px;
         top: 0px;
     }
+}
+.ds-powered-by {
+    display: none;
+}
+.comments {
+    margin-top: 15px;
+}
+.comments h4 {
+    padding-bottom: 0;
 }

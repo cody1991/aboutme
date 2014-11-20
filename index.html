@@ -490,7 +490,7 @@
             <div class="container">
 
                 <!--contact info start-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h4>Contact details</h4>
                     <!-- <p> <i class="fa fa-mobile"></i> 15112277883 </p> -->
                     <p> <i class="fa fa-envelope-o"></i>476490767@qq.com</p>
@@ -499,18 +499,27 @@
                 </div>
                 <!--contact info end-->
 
-                <!--contact form start-->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 conForm">
-                    <h4>Shoot a message!</h4>
-                    <div id="message"></div>
-                    <form method="post" action="" name="cform" id="cform">
-                        <input name="name" required id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name...">
-                        <input name="email" required id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Your email...">
-                        <textarea required name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your message..."></textarea>
-                        <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
-                        <div id="simple-msg"></div>
-                    </form>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 comments">
+                    <h4>Comments</h4>
+
+                    <div class="ds-thread" data-thread-key="aboutme" data-title="aboutme" data-url="http://cody1991.github.io/aboutme/"></div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                    var duoshuoQuery = {
+                        short_name: "aboutme"
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                    </script>
                 </div>
+
                 <!--contact form end-->
 
             </div>
