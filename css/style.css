@@ -180,13 +180,16 @@ header {
     padding-bottom: 42px;
 }
 .mbnt {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     display: inline-block;
-    line-height: 52px;
+    line-height: 40px;
     color: #fff;
     font-size: 14px;
     background-color: #EF7674;
     text-transform: uppercase;
     padding: 0 29px;
+    margin: 0 10px;
 }
 .mbnt:hover {
     color: #eaeaea;
@@ -530,6 +533,8 @@ header {
     background-size: cover;
 }
 .bntDownload {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -1513,6 +1518,6 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 .comments h4 {
     padding-bottom: 0;
 }
-img[src*="baidu"]{
+img[src*="baidu"] {
     display: none;
 }
