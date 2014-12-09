@@ -191,7 +191,7 @@ header {
     padding: 0 29px;
     margin: 0 10px;
 }
-.mbnt:hover {
+.mbnt:hover, .mbnt:active {
     color: #eaeaea;
     text-decoration: none;
 }
