@@ -6,7 +6,7 @@
                 left: 0,
                 top: 0,
                 tempRandom: 0,
-                currentCount:0
+                currentCount: 0
             }
 
             function filterRandom() {
@@ -24,7 +24,7 @@
             }
 
             function starEle(parent) {
-            	randomObj.currentCount += 1;
+                randomObj.currentCount += 1;
                 var starEle = document.createElement('img');
                 starEle.src = "images/star.png";
                 starEle.className = "star " + "star-" + randomObj.currentCount;
@@ -35,6 +35,16 @@
             }
 
             function init(parent, starCount) {
+
+                // 弄了一个加载时的动画，但是这个页面不大，所以模拟了一秒作为加载时间
+                window.onload = function() {
+                    setTimeout(function() {
+                        document.getElementById('loading').style.display = "none";
+                        parent.className += " active";
+                    },1000);
+                }
+
+                // 添加闪烁的星星
                 for (var i = 0; i < starCount; i++) {
                     starEle(parent);
                 }
@@ -44,6 +54,6 @@
             }
         }
     )();
-    starBuild.init(document.getElementById('star-parent'), 6);
+    starBuild.init(document.getElementById('star-parent'), 10);
 
 })(document);

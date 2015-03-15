@@ -47,7 +47,7 @@ textarea {
   min-width: 320px;
   position: relative;
   margin: 0 auto;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 /*
     2015.3.15 for 腾讯财付通TID团队招聘 - 网页重构
@@ -284,28 +284,68 @@ textarea {
             transform: scale(1);
   }
 }
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes wordBubble {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.98, 1.02, 1);
+    transform: scale3d(0.98, 1.02, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.02, 0.98, 1);
+    transform: scale3d(1.02, 0.98, 1);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
-@keyframes fadeInDown {
+@keyframes wordBubble {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.98, 1.02, 1);
+    transform: scale3d(0.98, 1.02, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.02, 0.98, 1);
+    transform: scale3d(1.02, 0.98, 1);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 @-webkit-keyframes tada1 {
@@ -428,14 +468,100 @@ textarea {
             transform: scale(1) rotate(-8deg) skew(-7deg) translateY(-23px);
   }
 }
+@-webkit-keyframes roundBg {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes roundBg {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  10% {
+    -webkit-transform: translateX(-10%) rotate(-4deg);
+            transform: translateX(-10%) rotate(-4deg);
+  }
+  20% {
+    -webkit-transform: translateX(8%) rotate(3deg);
+            transform: translateX(8%) rotate(3deg);
+  }
+  30% {
+    -webkit-transform: translateX(-6%) rotate(-3deg);
+            transform: translateX(-6%) rotate(-3deg);
+  }
+  40% {
+    -webkit-transform: translateX(4%) rotate(2deg);
+            transform: translateX(4%) rotate(2deg);
+  }
+  50% {
+    -webkit-transform: translateX(-2%) rotate(-1deg);
+            transform: translateX(-2%) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  10% {
+    -webkit-transform: translateX(-10%) rotate(-4deg);
+            transform: translateX(-10%) rotate(-4deg);
+  }
+  20% {
+    -webkit-transform: translateX(8%) rotate(3deg);
+            transform: translateX(8%) rotate(3deg);
+  }
+  30% {
+    -webkit-transform: translateX(-6%) rotate(-3deg);
+            transform: translateX(-6%) rotate(-3deg);
+  }
+  40% {
+    -webkit-transform: translateX(4%) rotate(2deg);
+            transform: translateX(4%) rotate(2deg);
+  }
+  50% {
+    -webkit-transform: translateX(-2%) rotate(-1deg);
+            transform: translateX(-2%) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -447,13 +573,91 @@ textarea {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  10% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rota {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rota {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes opa {
+  12.0% {
+    opacity: 0.80;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.60;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70.0% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.60;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91.0% {
+    opacity: 0.87;
+  }
+}
+@keyframes opa {
+  12.0% {
+    opacity: 0.80;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.60;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70.0% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.60;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91.0% {
+    opacity: 0.87;
   }
 }
 body {
@@ -469,7 +673,13 @@ body {
   background: #18b4ed;
   border-color: transparent;
 }
-.main-content {
+.container {
+  display: none;
+}
+.container.active {
+  display: block;
+}
+.container .main-content {
   background: transparent url(../images/main-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -477,10 +687,11 @@ body {
   color: #2ec0ec;
   height: auto;
 }
-.main-content .use-type {
+.container .main-content .use-type {
   width: 100%;
 }
-.main-content .use-type li {
+.container .main-content .use-type li {
+  padding-top: 5px;
   z-index: 99;
   overflow: hidden;
   width: 70px;
@@ -488,118 +699,144 @@ body {
   -webkit-animation: flipInY 1s ease both;
           animation: flipInY 1s ease both;
 }
-.main-content .use-type li.type-1 {
+.container .main-content .use-type li .round-bg {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  width: 56px;
+  height: 56px;
+  top: 3px;
+  left: 7px;
+  border-radius: 100px;
+  -webkit-animation: roundBg 2s linear both infinite;
+          animation: roundBg 2s linear both infinite;
+}
+.container .main-content .use-type li.type-1 img,
+.container .main-content .use-type li.type-2 img,
+.container .main-content .use-type li.type-3 img,
+.container .main-content .use-type li.type-4 img,
+.container .main-content .use-type li.type-5 img {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1px;
+}
+.container .main-content .use-type li.type-1 {
   left: 30%;
-  top: 10px;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  top: 15px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
-.main-content .use-type li.type-1 p {
+.container .main-content .use-type li.type-1 p {
   -webkit-animation: slideLeft 0.5s ease-in backwards;
           animation: slideLeft 0.5s ease-in backwards;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
-.main-content .use-type li.type-1 img {
-  -webkit-animation: rotate 6s linear 7s backwards infinite;
-          animation: rotate 6s linear 7s backwards infinite;
-}
-.main-content .use-type li.type-2 {
-  left: 0;
-  top: 34%;
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
-}
-.main-content .use-type li.type-2 p {
-  -webkit-animation: slideLeft 0.5s ease-in backwards;
-          animation: slideLeft 0.5s ease-in backwards;
-  -webkit-animation-delay: 1.9s;
-          animation-delay: 1.9s;
-}
-.main-content .use-type li.type-2 img {
-  -webkit-animation: rotate 6s linear 11s backwards infinite;
-          animation: rotate 6s linear 11s backwards infinite;
-}
-.main-content .use-type li.type-3 {
-  left: 5px;
-  bottom: 25px;
-  -webkit-animation-delay: 2.9s;
-          animation-delay: 2.9s;
-}
-.main-content .use-type li.type-3 p {
-  -webkit-animation: slideLeft 0.5s ease-in backwards;
-          animation: slideLeft 0.5s ease-in backwards;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
-}
-.main-content .use-type li.type-3 img {
-  -webkit-animation: rotate 6s linear 10s backwards infinite;
-          animation: rotate 6s linear 10s backwards infinite;
-}
-.main-content .use-type li.type-4 {
-  top: 20%;
-  right: 0;
-  -webkit-animation-delay: 4.1s;
-          animation-delay: 4.1s;
-}
-.main-content .use-type li.type-4 p {
-  -webkit-animation: slideRight 0.5s ease-in backwards;
-          animation: slideRight 0.5s ease-in backwards;
-  -webkit-animation-delay: 4.3s;
-          animation-delay: 4.3s;
-}
-.main-content .use-type li.type-4 img {
-  -webkit-animation: rotate 6s linear 9s backwards infinite;
-          animation: rotate 6s linear 9s backwards infinite;
-}
-.main-content .use-type li.type-5 {
-  right: 5px;
-  bottom: 30px;
-  -webkit-animation-delay: 5.3s;
-          animation-delay: 5.3s;
-}
-.main-content .use-type li.type-5 p {
-  -webkit-animation: slideRight 0.5s ease-in backwards;
-          animation: slideRight 0.5s ease-in backwards;
+.container .main-content .use-type li.type-1 .round-bg {
   -webkit-animation-delay: 5.5s;
           animation-delay: 5.5s;
 }
-.main-content .use-type li.type-5 img {
-  -webkit-animation: rotate 6s linear 8s backwards infinite;
-          animation: rotate 6s linear 8s backwards infinite;
+.container .main-content .use-type li.type-2 {
+  left: 0;
+  top: 34%;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
-.main-content .use-type li img {
-  width: 80%;
+.container .main-content .use-type li.type-2 p {
+  -webkit-animation: slideLeft 0.5s ease-in backwards;
+          animation: slideLeft 0.5s ease-in backwards;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
-.main-content .use-type li.mobile {
+.container .main-content .use-type li.type-2 .round-bg {
+  -webkit-animation-delay: 5.8s;
+          animation-delay: 5.8s;
+}
+.container .main-content .use-type li.type-3 {
+  left: 5px;
+  bottom: 25px;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.container .main-content .use-type li.type-3 p {
+  -webkit-animation: slideLeft 0.5s ease-in backwards;
+          animation: slideLeft 0.5s ease-in backwards;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+}
+.container .main-content .use-type li.type-3 .round-bg {
+  -webkit-animation-delay: 6.4s;
+          animation-delay: 6.4s;
+}
+.container .main-content .use-type li.type-4 {
+  top: 20%;
+  right: 6px;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+.container .main-content .use-type li.type-4 p {
+  -webkit-animation: slideRight 0.5s ease-in backwards;
+          animation: slideRight 0.5s ease-in backwards;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+.container .main-content .use-type li.type-4 .round-bg {
+  -webkit-animation-delay: 6.1s;
+          animation-delay: 6.1s;
+}
+.container .main-content .use-type li.type-5 {
+  right: 5px;
+  bottom: 60px;
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s;
+}
+.container .main-content .use-type li.type-5 p {
+  -webkit-animation: slideRight 0.5s ease-in backwards;
+          animation: slideRight 0.5s ease-in backwards;
+  -webkit-animation-delay: 5.9s;
+          animation-delay: 5.9s;
+}
+.container .main-content .use-type li.type-5 .round-bg {
+  -webkit-animation-delay: 6.7s;
+          animation-delay: 6.7s;
+}
+.container .main-content .use-type li.mobile {
   z-index: 98;
-  -webkit-animation: bounceIn 1s 6.5s ease both;
-          animation: bounceIn 1s 6.5s ease both;
+  -webkit-animation: bounceIn 0.8s ease both;
+          animation: bounceIn 0.8s ease both;
   text-align: center;
   position: relative;
   width: 100%;
-  padding: 110px 15px 10px;
+  padding: 110px 15px 20px;
 }
-.main-content .use-type li.mobile img {
-  display: inline-block;
-  width: 50%;
+.container .main-content .use-type li.mobile div {
+  margin: 0 auto;
+  width: 33%;
   min-width: 130px;
+  position: relative;
 }
-.intro-word {
-  padding: 0 0 5px 0;
+.container .main-content .use-type li.mobile div img.mobile-main {
+  -webkit-animation: pulse 1.1s 1.2s ease both 5;
+          animation: pulse 1.1s 1.2s ease both 5;
+  display: inline-block;
+  width: 100%;
+}
+.container .intro-word {
+  padding: 0 0 10px 0;
   text-align: center;
 }
-.intro-word img {
-  -webkit-animation: fadeInDown 1s 7.5s ease both;
-          animation: fadeInDown 1s 7.5s ease both;
-  max-width: 100%;
+.container .intro-word img {
+  -webkit-animation: wordBubble 1s 6.8s ease both;
+          animation: wordBubble 1s 6.8s ease both;
+  max-width: 90%;
 }
-.btn-group {
+.container .btn-group {
   padding-bottom: 40px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
 }
-.btn-group a {
+.container .btn-group a {
+  cursor: pointer;
   position: relative;
   -webkit-transition: 0.2s all;
           transition: 0.2s all;
@@ -612,15 +849,15 @@ body {
   background: transparent;
   border: 2px solid #18b4ed;
 }
-.btn-group a.transfer-accounts:hover,
-.btn-group a.share:hover,
-.btn-group a.transfer-accounts:active,
-.btn-group a.share:active {
+.container .btn-group a.transfer-accounts:hover,
+.container .btn-group a.share:hover,
+.container .btn-group a.transfer-accounts:active,
+.container .btn-group a.share:active {
   color: #f9f9f9;
   background: #18b4ed;
   border-color: transparent;
 }
-.btn-group a.transfer-accounts {
+.container .btn-group a.transfer-accounts {
   -webkit-transform: rotate(-8deg) skew(-7deg) translateY(0);
       -ms-transform: rotate(-8deg) skew(-7deg) translateY(0);
           transform: rotate(-8deg) skew(-7deg) translateY(0);
@@ -628,10 +865,10 @@ body {
   margin-left: 7%;
   -webkit-animation: tada1 1s ease both;
           animation: tada1 1s ease both;
-  -webkit-animation-delay: 8.5s;
-          animation-delay: 8.5s;
+  -webkit-animation-delay: 7.4s;
+          animation-delay: 7.4s;
 }
-.btn-group a.share {
+.container .btn-group a.share {
   -webkit-transform: rotate(-8deg) skew(-7deg) translateY(-23px);
       -ms-transform: rotate(-8deg) skew(-7deg) translateY(-23px);
           transform: rotate(-8deg) skew(-7deg) translateY(-23px);
@@ -639,10 +876,10 @@ body {
   margin-right: 7%;
   -webkit-animation: tada2 1s ease both;
           animation: tada2 1s ease both;
-  -webkit-animation-delay: 8.5s;
-          animation-delay: 8.5s;
+  -webkit-animation-delay: 7.4s;
+          animation-delay: 7.4s;
 }
-.star {
+.container .star {
   position: absolute;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
@@ -652,27 +889,113 @@ body {
   width: 5px;
   height: 5px;
 }
-.star-1 {
+.container .star-1 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-.star-2 {
+.container .star-2 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.star-3 {
+.container .star-3 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.star-4 {
+.container .star-4 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
-.star-5 {
+.container .star-5 {
   -webkit-animation-delay: 1.0s;
           animation-delay: 1.0s;
 }
-.star-6 {
+.container .star-6 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+}
+.container .star-7 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.container .star-8 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.container .star-9 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.container .star-10 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#loading .bokeh {
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid rgba(150, 150, 150, 0.1);
+  list-style: none;
+}
+#loading .bokeh li {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+}
+#loading .bokeh li:nth-child(1) {
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -10px;
+  background: #00C176;
+  -webkit-transform-origin: 50% 250%;
+      -ms-transform-origin: 50% 250%;
+          transform-origin: 50% 250%;
+  -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+          animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+}
+#loading .bokeh li:nth-child(2) {
+  top: 50%;
+  right: 0;
+  margin: -10px 0 0 0;
+  background: #FF003C;
+  -webkit-transform-origin: -150% 50%;
+      -ms-transform-origin: -150% 50%;
+          transform-origin: -150% 50%;
+  -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+          animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+}
+#loading .bokeh li:nth-child(3) {
+  left: 50%;
+  bottom: 0;
+  margin: 0 0 0 -10px;
+  background: #FABE28;
+  -webkit-transform-origin: 50% -150%;
+      -ms-transform-origin: 50% -150%;
+          transform-origin: 50% -150%;
+  -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+          animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+}
+#loading .bokeh li:nth-child(4) {
+  top: 50%;
+  left: 0;
+  margin: -10px 0 0 0;
+  background: #88C100;
+  -webkit-transform-origin: 250% 50%;
+      -ms-transform-origin: 250% 50%;
+          transform-origin: 250% 50%;
+  -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
+          animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }

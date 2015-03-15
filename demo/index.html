@@ -8,38 +8,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta content="telephone=no" name="format-detection" />
-    <title>framework</title>
+    <title>财付通</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 10]>
+        <link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+    <![endif]-->
 </head>
 
 <body>
-    <div class="container" id="star-parent">
+    <!--[if lt IE 10]>      
+    <div class="container active" id="star-parent">
+    <![endif]-->
 
+    <!--[if gt IE 10]><!-->
+    <div class="container" id="star-parent">
+    <!--<![endif]-->
+
+        
         <div class="main-content">
             <ul class="use-type">
                 <li class="type-1">
+                    <div class="round-bg"></div>
                     <img src="images/use-type-1.png" />
                     <p>家人汇款</p>
                 </li>
                 <li class="type-2">
+                    <div class="round-bg"></div>
                     <img src="images/use-type-2.png" />
                     <p>同事周转</p>
                 </li>
                 <li class="type-3">
+                    <div class="round-bg"></div>
                     <img src="images/use-type-3.png" />
                     <p>同学礼金</p>
                 </li>
                 <li class="type-4">
+                    <div class="round-bg"></div>
                     <img src="images/use-type-4.png" />
                     <p>女友零花钱</p>
                 </li>
                 <li class="type-5">
+                    <div class="round-bg"></div>
                     <img src="images/use-type-5.png" />
                     <p>基友过夜费</p>
                 </li>
                 <li class="mobile">
-                    <img src="images/mobile.png"/>
+                    <div>
+                        <img class="mobile-main" src="images/mobile.png" />
+                    </div>
                 </li>
             </ul>
         </div>
@@ -53,6 +70,18 @@
             <a class="transfer-accounts">转账</a>
             <a class="share">分享</a>
         </div>
+
+
+    </div>
+    
+    <!-- 加载动画 -->
+    <div id="loading">
+        <ul class="bokeh">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     <script type="text/javascript" src="js/common.js"></script>
 </body>
