@@ -1,25 +1,17 @@
+::-webkit-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
 audio, canvas, img, video {
     vertical-align: middle;
-}
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-textarea {
-    resize: vertical;
 }
 .clearfix:before, .clearfix:after {
     content: " ";
@@ -352,7 +344,7 @@ body {
                         position: relative;
                         width: 52px;
                         height: 52px;
-                        margin-bottom: 1px;
+                        margin-bottom: 3px;
                     }
                 }
                 &.type-1 {
@@ -454,7 +446,7 @@ body {
         a {
             cursor: pointer;
             position: relative;
-            transition: 0.2s all;
+            transition: 0.1s all;
             width: 40%;
             display: inline-block;
             height: 54px;
@@ -579,4 +571,31 @@ body {
             }
         }
     }
+}
+::-webkit-scrollbar {
+    background: transparent;
+}
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+::-moz-scrollbar {
+    background: transparent;
+}
+::-moz-scrollbar-track-piece {
+    background: transparent;
+}
+::-moz-scrollbar-thumb {
+    background: transparent;
+}
+::scrollbar {
+    background: transparent;
+}
+::scrollbar-track-piece {
+    background: transparent;
+}
+::scrollbar-thumb {
+    background: transparent;
 }
