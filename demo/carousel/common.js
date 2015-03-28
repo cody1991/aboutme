@@ -72,7 +72,8 @@
                 carouselInterval: null,
                 nav: null,
                 navItem: null,
-                canClick: true
+                canClick: true,
+                canClickTimeout: null
             }
 
             function carouselInit() {
@@ -103,7 +104,11 @@
             }
 
             function clickNav(event) {
+
+
+
                 if (carousel.canClick) {
+                    clearTimeout(carousel.canClickTimeout);
                     clearInterval(carousel.carouselInterval);
 
                     var target = util.getTarget(event);
@@ -134,9 +139,9 @@
                 }
                 // 防止点击过快 页面错乱
                 carousel.canClick = false;
-                setTimeout(function() {
+                carousel.canClickTimeout = setTimeout(function() {
                     carousel.canClick = true;
-                }, 700);
+                }, 1000);
             }
 
             function autoCarousel(autoplayTime) {
