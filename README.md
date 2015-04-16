@@ -55,6 +55,8 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [项目地址](https://github.com/cody1991/aboutme/tree/gh-pages/projects/weishang) / [主页](http://cody1991.github.io/aboutme/projects/weishang/)
 
+<hr/>
+
 个人学习案例整合：
 ------------------
 [gulp -- 用自动化构建工具增强你的工作流程 学习](https://github.com/cody1991/gulp-study)
