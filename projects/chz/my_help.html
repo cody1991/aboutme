@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta content="telephone=no" name="format-detection" />
+    <title>拆盒子</title>
+    <link rel="stylesheet" type="text/css" href="style/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="style/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="style/base.css">
+</head>
+
+<body>
+
+
+    <!-- 
+        have_price是模拟的中奖信息
+
+        0代表没中奖
+
+        1模拟写了个一等奖
+     -->
+    
+    <input type="hidden" id="have_price" value='0'>
+
+    <div class="container gift_list_wrap">
+        <div class="share_tip share_thank">
+            <img src="images/share_thank_tip.png" />
+        </div>
+        <div class="share_tip share_help">
+            <img src="images/share_help_tip.png" />
+        </div>
+
+
+        <img src="images/logo.png" class="logo" alt="微互动" />
+
+
+
+        <div id="gift_list">
+            <div class="item" data-state="1">
+                <div class="gift">
+                    <img src="images/icon_prize1_opened.png" />
+                </div>
+            </div>
+            <div class="item" data-state="2">
+                <div class="gift">
+                    <img src="images/icon_prize2_opened.png" />
+                </div>
+            </div>
+            <div class="item" data-state="3">
+                <div class="gift">
+                    <img src="images/icon_prize3.png" />
+                </div>
+            </div>
+            <div class="item" data-state="4">
+                <div class="gift">
+                    <img src="images/icon_prize4.png" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main">
+
+
+        </div>
+
+
+
+        <div class="my_help_state" id="my_help_state_1">
+            <a class="share_thank_btn btn" href="#">
+                <img src="images/share_thank_btn.png" />
+            </a>
+
+            <div class="share_peo">
+                <p class="share_peo_tip">很遗憾没有中奖，这些朋友帮你拆了礼盒</p>
+                <ul class="share_peo_main" id="share_peo_main_1">
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/icon_prize3.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                </ul>
+                <a id="scroll_pre" class="scroll_tip"></a>
+                <a id="scroll_next" class="scroll_tip"></a>
+            </div>
+        </div>
+
+        <div class="my_help_state" id="my_help_state_2">
+            <a class="share_thank_btn btn" href="#">
+                <img src="images/share_thank_btn.png" />
+            </a>
+
+            <div class="share_peo">
+                <p class="share_peo_tip">恭喜你获得了<span class='price_name'> 一等奖</span> ，这些朋友帮你拆了礼盒</p>
+                <ul class="share_peo_main" id="share_peo_main_2">
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/icon_prize1.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                </ul>
+                <a id="scroll_pre" class="scroll_tip"></a>
+                <a id="scroll_next" class="scroll_tip"></a>
+            </div>
+        </div>
+
+
+        <div class="my_help_state" id="my_help_state_3">
+            <a class="share_help_btn btn" href="#">
+                <img src="images/share_help_btn.png" />
+            </a>
+            <div class="share_peo">
+                <p class="share_remain_tip">当前还差
+                    <span class="remain_count">8</span>个人，才能拆开礼物哦，这些朋友帮你拆了礼盒
+                </p>
+                <ul class="share_peo_main" id="share_peo_main_3">
+                    <!-- <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li> -->
+                </ul>
+                <a id="scroll_pre" class="scroll_tip"></a>
+                <a id="scroll_next" class="scroll_tip"></a>
+            </div>
+
+        </div>
+
+        <div class="my_help_state" id="my_help_state_4">
+            <a class="open_btn btn" href="#">
+                <img src="images/open_btn.png" />
+            </a>
+            <div class="share_peo">
+                <p class="share_remain_tip">可以打开礼盒了，这些朋友帮你拆了礼盒</p>
+                <ul class="share_peo_main" id="share_peo_main_4">
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src='images/user_head.png' />
+                        </span>
+                    </li>
+                </ul>
+                <a id="scroll_pre" class="scroll_tip"></a>
+                <a id="scroll_next" class="scroll_tip"></a>
+            </div>
+        </div>
+
+        <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/common.js"></script>
+        <script type="text/javascript">
+        //  div#gift_list 礼物的轮播里面，每个item都有一个data-state
+        //  代表的是他所对应的下面的 .my_help_state是哪一个状态
+
+        //  .my_help_state一开始都游离在.main意外
+        //  初始化的是先把第一个礼物所对应的状态和里面包含的轮播头像放进去
+
+        //  在后面会检测现在在哪一个状态，并且调出所对应状态的 div 附在.main上
+        //  在此之前会把原本.main里面的状态给弄回游离（不显示）状态
+        $(document).ready(function() {
+
+            var state1 = $('#my_help_state_1');
+            var state2 = $('#my_help_state_2');
+
+            $('.main').append(state1);
+            $('.main > div').show();
+            var share_peo_owl = $('#share_peo_main_1');
+            share_peo_owl.show().owlCarousel({
+                loop: false,
+                margin: 0,
+                dots: false,
+                items: 5
+            });
+            // 点击事件，分享朋友滚动条的左右滚动事件
+            $('#scroll_pre').click(function() {
+                share_peo_owl.trigger('prev.owl.carousel');
+            });
+            $('#scroll_next').click(function() {
+                share_peo_owl.trigger('next.owl.carousel');
+            });
+
+            if ($('#gift_list').length > 0) {
+                var gift_list_owl = $("#gift_list");
+                var pre_state = 1;
+                gift_list_owl.show().owlCarousel({
+                    items: 1,
+                    loop: false,
+                    margin: 0,
+                    smartSpeed: 450,
+                    dots: true,
+                    onDragged: function() {
+                        setTimeout(function() {
+                            var state = $('#gift_list .owl-item.active .item').data('state');
+                            if (state != pre_state) {
+                                $('.gift_list_wrap .main > div').hide();
+                                $('.gift_list_wrap').append($('.gift_list_wrap .main > div'));
+                                $('.main').append($('#my_help_state_' + state));
+                                var share_peo_owl = $('#share_peo_main_' + state);
+                                $('.main > div').fadeIn();
+                                if (share_peo_owl.children().length > 0) {
+                                    share_peo_owl.show().owlCarousel({
+                                        loop: false,
+                                        margin: 0,
+                                        dots: false,
+                                        items: 5
+                                    });
+                                    // 点击事件，分享朋友滚动条的左右滚动事件
+
+                                    $('#scroll_pre').click(function() {
+                                        share_peo_owl.trigger('prev.owl.carousel');
+                                    });
+                                    $('#scroll_next').click(function() {
+                                        share_peo_owl.trigger('next.owl.carousel');
+                                    });
+
+                                } else {
+                                    share_peo_owl.hide();
+                                    share_peo_owl.next().hide().next().hide();
+                                }
+                            }
+                            pre_state = state;
+                        }, 250);
+                    }
+                });
+            }
+        })
+        </script>
+
+        <script type="text/javascript">
+        function setPriceTxt(price_txt) {
+            price_txt = "恭喜你获得了<span class='price_name'> " + price_txt + "</span> ，这些朋友帮你拆了礼盒";
+            return price_txt;
+        }
+        $('.open_btn').click(function() {
+
+            var have_price = parseInt($('#have_price').val());
+
+            if ($(this).hasClass('get_more')) {
+                window.location.href = "pick.html";
+            } else {
+                $(this).addClass('get_more');
+                $(this).find('img').attr('src', 'images/get_more.png');
+
+                var price_txt;
+                if (have_price == 0) {
+                    price_txt = '很遗憾没有中奖，这些朋友帮你拆了礼盒';
+                } else if (have_price == 1) {
+                    price_txt  =  setPriceTxt('一等奖') ;
+                }
+                else if (have_price == 2) {
+                    price_txt  =  setPriceTxt('二等奖') ;
+                }
+                $(this).next().find('.share_remain_tip').html(price_txt);
+
+                var pic_src = $('#gift_list .owl-item.active .gift img').attr('src').split('.')[0] + '_opened.png';
+                $('#gift_list .owl-item.active .gift img').attr('src', pic_src);
+            }
+        })
+        </script>
+</body>
+
+</html>

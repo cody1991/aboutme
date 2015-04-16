@@ -20,7 +20,7 @@
 
 <hr/> 
  
-个人项目总结：
+个人项目：
 ------------------
 
 微商城项目，移动前端开发项目：
@@ -51,9 +51,13 @@
 
 [主页](http://cody1991.github.io/aboutme/projects/markcard/index.html)
 
+拆盒子微信活动页面，主要也是让微信好友帮忙拆开盒子领取礼物：
+
+[活动主页](http://cody1991.github.io/aboutme/projects/chz/index.html) / [个人盒子页面](http://cody1991.github.io/aboutme/projects/chz/my_help.html) / [找人帮忙页面](http://cody1991.github.io/aboutme/projects/chz/other_help.html) / [选取盒子页面](http://cody1991.github.io/aboutme/projects/chz/pick.html)
+
 <hr/>
 
-个人github项目总结：
+个人github项目：
 ------------------
 fullpage插件，主要用于移动前端的邀请函制作：
 
@@ -81,7 +85,7 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 <hr/>
 
-个人学习案例整合：
+个人学习案例：
 ------------------
 [gulp -- 用自动化构建工具增强你的工作流程 学习](https://github.com/cody1991/gulp-study)
 

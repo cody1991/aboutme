@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta content="telephone=no" name="format-detection" />
+    <title>拆盒子</title>
+    <link href="style/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 
+        id = have_gift 有两个值
+
+        1代表没有礼物，2代表有礼物
+
+        1的时候按钮字为 领取礼盒
+
+        2的时候按钮字为 我的礼盒
+     -->
+    <input type="hidden" id="have_gift" value='1'>
+
+
+    <div class="container">
+        <img src="images/logo.png" class="logo" alt="微互动" />
+        <div class="gift">
+            <img src="images/layer_box.png" class="gift_bg" />
+            <img src="images/icon_prize1.png" class="gift_pic" />
+        </div>
+
+        <div class="main btn_group">
+
+            <a class="get_btn btn">
+                <img />
+            </a>
+
+            <br/>
+
+            <a class="price_btn btn">
+                <img src="images/price_btn.png" />
+            </a>
+
+            <a class="rule_btn btn">
+                <img src="images/rule_btn.png" />
+            </a>
+        </div>
+
+        <div class="main price_list">
+            <p class="price_list_top">
+                <img src="images/price_list.png">
+                <a class="back_btn btn">
+                    <img src="images/back_btn.png" />
+                </a>
+            </p>
+            <div id="iscroll_wrap">
+                <ul>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪小溪小溪小溪小溪小溪小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖一等奖一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list_head">
+                            <img src="images/user_head.png">
+                        </span>
+                        <span class="list_name">
+                            小溪
+                        </span>
+                        <span class="list_price">
+                            一等奖
+                        </span>
+                        <span class="list_time">
+                            2014-10-31
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main rule_intro">
+            <p class="rule_intro_top">
+                <img src="images/rule_intro.png">
+                <a class="back_btn btn">
+                    <img src="images/back_btn.png" />
+                </a>
+            </p>
+            <p>活动规则</p>
+            <p>活动规则</p>
+            <p>活动规则</p>
+            <p>活动规则</p>
+            <p>活动规则</p>
+        </div>
+
+
+    </div>
+    <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+    <script src="js/iscroll.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    var have_gift = parseInt($('#have_gift').val());
+
+    // 还没有礼物的状态
+    if (have_gift == 1) {
+        $('.get_btn').attr('href', 'pick.html');
+        $('.get_btn img').attr('src', 'images/gift_btn.png');
+    }
+    // 已经有礼物了
+    else if (have_gift == 2) {
+        $('.get_btn').attr('href', 'my_help.html');
+        $('.get_btn img').attr('src', 'images/my_btn.png');
+    }
+    </script>
+
+
+
+</body>
+
+</html>
