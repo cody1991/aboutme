@@ -1,0 +1,222 @@
+.container {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 640px;
+    position: relative;
+    margin: 0 auto;
+}
+.owl-theme .owl-nav {
+    margin-top: 0;
+}
+.owl-theme .owl-dots .owl-dot span {
+    transition: 0.5s all;
+}
+.banner_owl {
+    display: none;
+    min-height: 15px;
+}
+.List {
+    position: relative;
+}
+.List ul {
+    padding-bottom: 60px;
+    background: #fffcf2;
+}
+.List ul li {
+    overflow: hidden;
+    padding: 10px 15px;
+    border-bottom: 1px solid #d3d1cb;
+}
+.List ul li > div {
+    float: left;
+}
+.List ul li > div.List_img {
+    width: 50px;
+    height: 50px;
+}
+.List ul li > div.List_img img {
+    width: 50px;
+    height: 50px;
+}
+.List ul li > div.List_intro p {
+    line-height: 25px;
+    margin-left: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 140px;
+}
+.List ul li > div.List_intro p:first-of-type {
+    color: #192023;
+    font-size: 16px;
+}
+.List ul li > div.List_intro p:last-of-type {
+    color: #505050;
+    font-size: 14px;
+}
+.List ul li > div.List_btn {
+    float: right;
+}
+.List ul li > div.List_btn a {
+    margin-top: 10px;
+    line-height: 30px;
+    height: 30px;
+    color: #fff;
+    background: #fa4219;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 100px;
+}
+.ADfooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 999;
+}
+.ADfooter img {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    vertical-align: middle;
+}
+.ADfooter .close {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../images/ad_close.png) no-repeat center center;
+    background-size: 20px 20px;
+}
+.mainTop {
+    background: #fff;
+    overflow: hidden;
+    padding: 15px 10px;
+}
+.mainTop div {
+    float: left;
+}
+.mainTop div.mt_img {
+    width: 60px;
+    height: 60px;
+}
+.mainTop div.mt_img img {
+    width: 60px;
+    height: 60px;
+}
+.mainTop div.mt_intro p {
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 140px;
+}
+.mainTop div.mt_intro p:first-of-type {
+    color: #192023;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+.mainTop div.mt_intro p:nth-of-type(2), .mainTop div.mt_intro p:nth-of-type(3) {
+    color: #515151;
+    font-size: 14px;
+    line-height: 18px;
+}
+.mainTop div.mt_intro p:nth-of-type(2) span, .mainTop div.mt_intro p:nth-of-type(3) span {
+    color: #f3580c;
+}
+.mainTop div.mt_btn {
+    float: right;
+}
+.mainTop div.mt_btn a {
+    margin-top: 15px;
+    line-height: 30px;
+    height: 30px;
+    color: #fffefe;
+    background: #fa4219;
+    display: inline-block;
+    padding: 0 12px;
+    border-radius: 100px;
+}
+.mainBody {
+    background: #eeeeee;
+    padding-bottom: 60px;
+}
+.mainBody .mbContent {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddddde;
+}
+.mainBody .mbContent .title {
+    color: #ec8c35;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.mainBody .mbContent .word {
+    color: #192023
+}
+.mainBody .mbContent .mainBody_owl {
+    display: none;
+    margin-top: 10px;
+}
+.state_top {
+    margin: 20px 10px;
+    padding: 10px;
+    background: #ececec;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.state_top > div {
+    float: left;
+}
+.state_top .st_img {
+    height: 40px;
+}
+.state_top .st_img img {
+    height: 40px;
+}
+.state_top .st_info {
+    margin-left: 10px;
+}
+.state_top .st_info p {
+    line-height: 20px;
+}
+.state_top .st_info p:first-of-type {
+    color: #f3580c;
+    padding-left: 25px;
+    background: url(../images/money_icon.png) no-repeat left center;
+    background-size: 20px 20px;
+}
+.state_top .st_info p:last-of-type {
+    color: #1d1d1d;
+}
+.state_top .st_info p:last-of-type span {
+    color: #bcb6b4;
+}
+.state_tip {
+    border-radius: 5px;
+    margin: 20px 10px;
+    background: #969696;
+    padding: 10px;
+}
+.state_tip p {
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+}
+.state_btn {
+    background: #f3580c;
+    color: #fff;
+    text-align: center;
+}
+.state_btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

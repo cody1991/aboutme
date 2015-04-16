@@ -63,6 +63,10 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [主页](http://cody1991.github.io/aboutme/projects/homepage/index.html)
 
+类APP游戏官网，简单的游戏列表以及游戏详情页面
+
+[游戏列表页面](http://cody1991.github.io/aboutme/projects/gameDemo/1.html) / [游戏详情页面](http://cody1991.github.io/aboutme/projects/gameDemo/2.html)
+
 <hr/>
 
 个人学习案例整合：
