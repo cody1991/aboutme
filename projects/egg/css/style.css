@@ -1,0 +1,401 @@
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+audio, canvas, img, video {
+    vertical-align: middle;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+html, body {
+    height: 100%;
+}
+.container {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+}
+.main {
+    margin-right: 250px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.mainContent {
+    position: relative;
+    /*后台可配*/
+    /*background: url(../images/bg.jpg) no-repeat top left;
+    background-size: 100% 100%;*/
+}
+.over {
+    position: absolute;
+    top: 0;
+    height: 90%;
+    z-index: 7;
+}
+.over_left {
+    left: 0;
+}
+.over_right {
+    right: 0;
+}
+.light {
+    z-index: 8;
+    position: absolute;
+    top: 0;
+}
+.light_left {
+    left: 10%;
+}
+.light_right {
+    right: 10%;
+}
+.prizeBoxMask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 49;
+    background: transparent;
+    display: none;
+}
+.prizeBoxWrapper {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    -webkit-animation: popPrizeFadeIn ease 1s forwards;
+}
+@-webkit-keyframes popPrizeFadeIn {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+.prizeBox {
+    position: absolute;
+    bottom: 200px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    text-align: center;
+}
+.prizeBox .prizeBg {
+    width: 100%;
+}
+.prizeBox .user_head {
+    top: 7%;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, .7);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.prizeBox .user_head img {
+    width: 100%;
+    height: 100%;
+}
+.prizeBox .prizeWord {
+    position: absolute;
+    font-size: 18px;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    color: #470000;
+}
+.prizeBox .prizeWord span {
+    color: #BA4163;
+}
+@media screen and (max-width: 1100px) {
+    .prizeBox .user_head {
+        margin-left: -30px;
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .prizeBox .user_head {
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+    }
+    .prizeBox .prizeWord {
+        font-size: 16px;
+    }
+}
+.eggMain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.egg {
+    cursor: pointer;
+}
+.egg.open {
+    -webkit-transform: translate(-166px, 120px) scale(1) !important;
+}
+.eggBoard {
+    background: #f8da60;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    height: 180px;
+}
+.eb1, .eb2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.eb1 {
+    top: 0;
+    height: 20px;
+    background: #ecbd00;
+}
+.eb2 {
+    top: 20px;
+    height: 10px;
+    background: #d4a000;
+}
+.eggCenter {
+    display: inline-block;
+    height: 400px;
+    width: 450px;
+    position: relative;
+    visibility: hidden;
+    z-index: 8;
+}
+.board {
+    z-index: 5;
+    display: block;
+    width: 450px;
+    left: 50%;
+    margin-left: -225px;
+    position: absolute;
+    bottom: 30px;
+}
+.egg_light {
+    z-index: 6;
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    margin-left: -170px;
+    width: 340px;
+    display: none;
+    -webkit-animation: egg_light 0.5s ease infinite;
+}
+@-webkit-keyframes egg_light {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.hammer {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: -200px;
+    width: 200px;
+    -webkit-transform-origin: right bottom;
+    -webkit-animation: hammer 1s ease alternate infinite;
+}
+.hammer.active {
+    top: 20px;
+    -webkit-animation: hammer 1s ease alternate infinite;
+    -webkit-animation: hammerClick 0.5s ease forwards;
+}
+@-webkit-keyframes hammer {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-5deg);
+    }
+}
+@-webkit-keyframes hammerClick {
+    0% {
+        -webkit-transform: rotate(40deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-50deg);
+        opacity: 0;
+    }
+}
+.prizeSwiper {
+    background: #fff799;
+    width: 100%;
+    height: 40px;
+    color: #cc000d;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.prizeSwiper .item {
+    line-height: 40px;
+}
+/*
+    sidebar
+*/
+
+.sidebar {
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 100%;
+    background: #f8da60;
+}
+.qrcode {
+    text-align: center;
+    margin: 20px;
+}
+.qrcode img {
+    width: 180px;
+}
+.qrcode p {
+    color: #c82e2c;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.qrcode p span {
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+.prizeTitle {
+    position: absolute;
+    background: url(../images/prizeTitle.png) no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    padding: 5px 50px 5px 10px;
+    bottom: 40px;
+    z-index: 8;
+}
+.prizeRecord .title {
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    background: #c82e2c;
+}
+.prizeRecordSwiper {
+    cursor: pointer;
+    width: 100%;
+    height: 280px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+.prizeRecordSwiper .item {
+    font-size: 20px;
+    color: #bd2225;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.prizeRecordSwiper .item span.item_name {
+    float: left;
+}
+.prizeRecordSwiper .item span.item_state {
+    float: right;
+}
+.spotGroup {
+    position: relative;
+    height: 70px;
+}
+.spot {
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+}
+.spot1 {
+    bottom: 10px;
+    left: 20%;
+}
+.spot2 {
+    left: 30%;
+}
+.spot3 {
+    right: 30%;
+}
+.spot4 {
+    bottom: 10px;
+    right: 20%;
+}
+.index .eggCenter {
+    width: 600px;
+    height: 500px;
+}
+.index .board {
+    width: 600px;
+    margin-left: -300px;
+}
+.index .hammer {
+    top: 50px;
+}
+.index .egg.open {
+    -webkit-transform: translate(-166px, 190px) scale(1) !important;
+}
+.index .egg_light {
+    z-index: 6;
+    position: absolute;
+    bottom: 78px;
+    left: 50%;
+    margin-left: -185px;
+    width: 370px;
+    display: none;
+    -webkit-animation: egg_light 0.5s ease infinite;
+}

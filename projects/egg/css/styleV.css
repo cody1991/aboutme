@@ -1,0 +1,87 @@
+/*
+    竖屏的砸金蛋样式（在style.css基础上）补充
+*/
+
+.over {
+    height: 70%;
+}
+.main {
+    margin-right: 0;
+}
+.prizeSwiperWrap {
+    z-index: 8;
+    position: absolute;
+    height: 310px;
+    right: 0;
+    bottom: 0;
+    background: #fff799;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+}
+.prizeSwiper {
+    border: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    height: 120px;
+    padding: 0 20px;
+    background: transparent;
+    font-size: 16px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    bottom: 160px;
+}
+.item {
+    line-height: 40px;
+}
+.prizeTitle {
+    bottom: 281px;
+}
+.prizeSwiperWrap .prizeTitle {
+    right: 0;
+    background: url(../images/prizeTitleR.png) no-repeat;
+    color: #c02024;
+    text-align: right;
+    padding: 5px 10px 5px 50px;
+}
+.prizeRecordWrap {
+    z-index: 8;
+    position: absolute;
+    height: 310px;
+    left: 0;
+    bottom: 0;
+    background: #fff799;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+}
+.prizeRecordSwiperV {
+    color: #cc000d;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    overflow: hidden;
+    border: 1px solid #facd89;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    height: 280px;
+    padding: 0 20px;
+    background: #fff;
+    font-size: 16px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+}
+.qrcode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto 10px;
+}
+.qrcode img {
+    width: 120px;
+}

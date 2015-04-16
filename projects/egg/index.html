@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection" />
+    <title>砸金蛋 大屏</title>
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://www.playwx.com/hd/static/codyLib/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="index">
+
+    <!--
+        使用了idangerous.swiper框架，来实现中奖记录和中奖奖品的轮播
+        项目地址在：http://www.idangero.us/sliders/swiper/
+
+        使用了cloud9carousel来实现中奖金蛋的3D轮播效果
+        项目地址在：https://github.com/cody1991/cloudCarousel
+     -->
+
+    <input type="hidden" id="bg" value="http://www.playwx.com/hd/demo/cody/12/egg/images/bg.jpg" />
+    <!--
+        背景是可以配置的，bg 是来确认背景图片的地址是什么
+     -->
+
+    <input type="hidden" id="recordInScreen" value="7" />
+    <!-- 这个是最大的一屏显示记录数，可配置 -->
+
+    <div class="container">
+
+        <div class="prizeBoxMask"></div>
+
+        <!-- 页面右边 -->
+        <div class="sidebar">
+
+            <!-- 二维码的扫描和随机码 -->
+            <div class="qrcode">
+                <img src="images/qrcode.png" />
+                <p>
+                    随机码： <span id="randomNumber">1234</span>
+                </p>
+            </div>
+            <!-- end qrcode -->
+
+            <!-- 中奖记录 -->
+            <div class="prizeRecord">
+                <p class="title">中奖记录</p>
+            </div>
+
+            <!-- 中奖记录滚动区域 -->
+            <div class="prizeRecordSwiper">
+                <div class="swiper-wrapper">
+                    <!-- 每个swiper-slide就是一条滚动元素 -->
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大11</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大10</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大9</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大8</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大7</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="item">
+                            <span class="item_name">熊大大6</span>
+                            <span class="item_state">一等奖</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end  prizeRecordSwiper-->
+
+            <!-- 底部的四个亮灯 -->
+            <div class="spotGroup">
+                <img src="images/spot1.png" class="spot spot1" />
+                <img src="images/spot2.png" class="spot spot2" />
+                <img src="images/spot3.png" class="spot spot3" />
+                <img src="images/spot4.png" class="spot spot4" />
+            </div>
+        </div>
+        <!-- end sidebar -->
+
+        <!-- 左边的主题部分 -->
+        <div class="main">
+            <div class="mainContent">
+
+                <!-- 灯光和帘布 -->
+                <img class="over_left over" src="images/over_left.png" />
+                <img class="over_right over" src="images/over_right.png" />
+                <img class="light_left light" src="images/light_left.png" />
+                <img class="light_right light" src="images/light_right.png" />
+
+                <!-- 砸金蛋的主体部分 -->
+                <div class="eggMain">
+
+                    <!--  背景-->
+                    <div class="eggBoard">
+                        <div class="eb1"></div>
+                        <div class="eb2"></div>
+                    </div>
+                    <!-- 锤子 -->
+                    <img src="images/hammer.png" class="hammer" />
+                    <!-- 三个金蛋 -->
+                    <div class="eggCenter">
+                        <img src="images/egg.png" class="egg egg1 cloud9-item" />
+                        <img src="images/egg.png" class="egg egg2 cloud9-item" />
+                        <img src="images/egg.png" class="egg egg3 cloud9-item" />
+                    </div>
+                    <!-- 灯光 -->
+                    <img src="images/light.png" class="egg_light" />
+                    <!-- 平台 -->
+                    <img src="images/board.png" class="board" />
+                </div>
+                <!-- end eggMain -->
+
+                <!-- 中奖记录 -->
+                <div class="prizeBoxWrapper">
+                    <div class="prizeBox">
+                        <!-- 中奖记录的外框图片 -->
+                        <img src="images/prize-box.png" class="prizeBg" />
+
+                        <!-- 用户头像 -->
+                        <div class="user_head">
+                            <img src="images/man.png" />
+                        </div>
+                        <!-- 中奖语 -->
+                        <div class="prizeWord">
+                            <p>恭喜<span>张三</span>获得<span>三等奖</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end prizeBoxWrapper -->
+            </div>
+
+
+            <div class="prizeTitle">
+                <p>奖品设置</p>
+            </div>
+
+            <!-- 中奖奖品的滚动区域 -->
+            <div class="prizeSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="item">
+                            一等奖 iphone6一台
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            二等奖 ipad mini一台
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            三等奖 ipad mini一台
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            四等奖 ipad mini一台
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end prizeSwiper -->
+        </div>
+        <!-- end main -->
+
+    </div>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/idangerous.swiper/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/jquery.cloud9carousel.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+
+    <!-- 设置可配置的背景图片 -->
+    <script type="text/javascript">
+    $('.mainContent').css({
+        'background': 'url(' + $('#bg').val() + ') no-repeat',
+        'background-size': '100% 100%'
+    })
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        var recordInScreen = parseInt($('#recordInScreen').val());
+        var mySwiper;
+        var mySwiperInterval;
+        var eggCenter = $('.eggCenter');
+
+
+        // 底部的中奖记录只有40px的高度，其他的都是主体部分的高度
+        var mainContent = $('.mainContent');
+        mainContent.height($(window).height() - 40);
+        $('.prizeRecordSwiper').height(40 * recordInScreen);
+
+        // 居中的处理
+        var qrcode = $('.qrcode');
+        qrcode.css('margin-top', $(window).height() / 2 - ($('.qrcode').height() + $('.prizeRecord').height() + $('.prizeRecordSwiper').height() + $('.spotGroup').height()) / 2);
+
+        $(window).resize(function() {
+            mainContent.height($(window).height() - 40);
+            qrcode.css('margin-top', $(window).height() / 2 - ($('.qrcode').height() + $('.prizeRecord').height() + $('.prizeRecordSwiper').height() + $('.spotGroup').height()) / 2);
+        })
+
+
+
+        /*
+            大于最大的一屏记录数的事件
+        */
+        if ($('.prizeRecordSwiper').find('.item').length > recordInScreen) {
+
+            // 中奖记录大于最大记录数的时候，可以自动滚动
+            mySwiper = new Swiper('.prizeRecordSwiper', {
+                mode: 'vertical',
+                loop: true,
+                slidesPerView: recordInScreen,
+            })
+            mySwiperInterval = setInterval(function() {
+                mySwiper.swipePrev();
+            }, 2000);
+            // 设置了1秒滚动一次
+        } else if ($('.prizeRecordSwiper').find('.item').length <= recordInScreen) {
+
+            // 中奖记录小于最大记录数的时候，不滚动
+            mySwiper = new Swiper('.prizeRecordSwiper', {
+                mode: 'vertical',
+                slidesPerView: recordInScreen,
+            })
+        }
+
+        eggCenter.Cloud9Carousel({
+            xOrigin: 0,
+            yOrigin: 230,
+            yRadius: -40,
+            xRadius: 300,
+            farScale: 0.5,
+            buttonLeft: $(""),
+            buttonRight: $(""),
+            autoPlay: 1,
+            autoPlayDelay: 1000,
+            speed: 3,
+            bringToFront: true,
+            onLoaded: function() {
+                eggCenter.css('visibility', 'visible');
+                eggCenter.css('display', 'none');
+                eggCenter.fadeIn(1000);
+            }
+        });
+
+        $('.egg').click(function(event) {
+
+            // 如果点击的，是最近的金蛋的时候，可以砸开。
+            if ($(eggCenter.data("carousel").nearestItem().element).attr('class') == ($(event.target).attr('class'))) {
+
+                // 金蛋的旋转停止
+                eggCenter.data("carousel").autoPlayAmount = 0;
+                // 遮盖层出来
+                $('.prizeBoxMask').show();
+                doPrize();
+            }
+        })
+
+        $('.hammer').click(function() {
+            eggCenter.data("carousel").autoPlayAmount = 0;
+            $('.prizeBoxMask').show();
+
+            // 和砸中金蛋的事件基本一致，主要添加了延迟501秒的设定，因为点击锤子的时候，可能产生 正在走的金蛋离屏幕更加近而砸了它， 501 是 cloud9carousel 的参数 autoPlayDelay / 2 + 1 得来的
+            setTimeout(function() {
+                doPrize();
+            }, 501);
+        });
+
+
+        // 进行抽奖的函数
+        function doPrize() {
+
+            // 先获取最前面的蛋的函数，方便还原
+            var nearestItemClassName = $(eggCenter).data("carousel").nearestItem().element.className;
+
+            // 中奖的提示在2秒后显示，5秒后消失
+            $('.prizeBoxWrapper').delay(2000).show(0).delay(5000).hide(0);
+            // 锤子砸下去的效果
+            $('.hammer').addClass('active');
+            // 金蛋换成彩色，增加open类方便定位
+            eggCenter.data("carousel").nearestItem().element.src = "images/open_egg.png";
+            eggCenter.data("carousel").nearestItem().element.className += ' open';
+            // 显示亮光
+            $('.egg_light').show();
+
+            // 两秒后添加中奖记录，配合上面的中奖提示两秒后显示的事件
+            setTimeout(function() {
+                addPriceRecord("小溪", "二等奖");
+            }, 2000);
+
+            // 七秒以后还原全部场合，七秒等于上面说的 5秒 + 2秒
+            setTimeout(function() {
+
+                // 金蛋区域可以再次选择，砸开的金蛋再次闭合，亮光去掉，遮盖层去掉，锤子还原
+                eggCenter.data("carousel").autoPlayAmount = 1;
+                eggCenter.data("carousel").nearestItem().element.src = "images/egg.png";
+                eggCenter.data("carousel").nearestItem().element.className = nearestItemClassName;
+                $('.egg_light').hide();
+                $('.prizeBoxMask').hide();
+                $('.hammer').removeClass('active');
+            }, 7000);
+        }
+
+        // 增加中奖记录的函数
+        function addPriceRecord(user_name, user_state) {
+
+            // 这个是最新的中奖记录的HTML结构
+            var slideHtml = '<p class="item"><span class="item_name">' + user_name + '</span><span class="item_state">' + user_state + "</span></p>";
+
+            // 使用mySwiper的方法 prependSlide 把最新的中奖记录添加到 第一条
+            mySwiper.prependSlide(slideHtml, 'swiper-slide');
+
+            // 用这个来重新初始化mySwiper
+            mySwiper.reInit();
+
+            // 如果在记录数为最大记录数+1时，就是增加了一条达到最大记录数+1的时候，重新初始化mySwiper，此时可轮播
+            if ($('.prizeRecordSwiper').find('.item').length == (recordInScreen + 1)) {
+                mySwiper = new Swiper('.prizeRecordSwiper', {
+                    mode: 'vertical',
+                    loop: true,
+                    slidesPerView: recordInScreen,
+                })
+
+                // 滚动到第一条，即最新的一条，然后可以开始滚动
+                mySwiper.swipeTo(0);
+                clearInterval(mySwiperInterval);
+                mySwiperInterval = setInterval(function() {
+                    mySwiper.swipePrev();
+                }, 2000);
+
+            } else if ($('.prizeRecordSwiper').find('.item').length > (recordInScreen + 1)) {
+                // 如果已经超过最大记录数+1条，那只需要滚动到第一条
+                mySwiper.swipeTo(0);
+            }
+        }
+    })
+    </script>
+
+</body>
+
+</html>

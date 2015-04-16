@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection" />
+    <title>砸金蛋 手机</title>
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <script src="http://www.playwx.com/hd/static/codyLib/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <input type="hidden" value="1" id="hasRegister" />
+    <!--
+        表示是否已注册来确认是否弹出注册框
+    -->
+    <input type="hidden" value="0" id="hasOpen" />
+    <!--
+        表示是否已经砸过金蛋了来确认金蛋的显示状态
+     -->
+
+    <input type="hidden" value="images/man.png" id="userHead" />
+    <input type="hidden" value="23" id="joinNumber" />
+
+    <div class="container">
+
+        <!-- 页面的主要部分 -->
+        <div class="front">
+            <div class="mainContent">
+                <img class="over_left over" src="images/over_left.png" />
+                <img class="over_right over" src="images/over_right.png" />
+                <div class="eggArea">
+                    <img src="images/hammer.png" class="hammerM" />
+                    <div class="eggBoard">
+                        <div class="eb1"></div>
+                        <div class="eb2"></div>
+                    </div>
+                    <img src="images/light.png" class="lightM" />
+                    <img src="images/egg.png" class="eggM" />
+                    <img src="images/board.png" class="board" />
+                </div>
+            </div>
+            <div class="mainFooter">
+                <a href="#" id="clickStart">开始游戏</a>
+                <p class="joinNumber">已有<span class="num"></span><span>人</span>参与抽奖</p>
+                <p class="footerWord">微互动 技术支持</p>
+            </div>
+        </div>
+
+        <!-- 弹出框 中奖信息 -->
+        <div class="popPrize popMain">
+            <div class="user_head">
+                <img />
+            </div>
+            <div class="prizeWord">
+                <p class="word1"></p>
+                <p class="word2"></p>
+            </div>
+            <a class="confirm">确认</a>
+        </div>
+        <!-- end popPrize -->
+
+        <!-- 弹出框 注册表格 -->
+        <div class="register_form popMain">
+            <div class="close"></div>
+            <p class="register_title">信息登记</p>
+            <div class="form_main">
+                <div class="input-group">
+                    <span class="input-group-addon">姓名</span>
+                    <input type="text" class="form-control required " id="username" name="username" placeholder="您的姓名">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">手机</span>
+                    <input type="tel" class="form-control required" id="phone" name="phone" placeholder="手机号码">
+                </div>
+                <div class="input-group randomNumber">
+                    <span class="input-group-addon">随机码</span>
+                    <input type="text" class="form-control required" id="randomNumber" name="randomNumber" placeholder="">
+                </div>
+                <button id="submit_btn" type="button">提交</button>
+            </div>
+        </div>
+        <!-- end register_form -->
+
+        <div class="popMask"></div>
+
+    </div>
+
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/mobile.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        $('.user_head').find('img').attr('src', $('#userHead').val());
+        $('.joinNumber').find('.num').html($('#joinNumber').val());
+
+        var canPrize = 1;
+        var prizeState = '三等奖'
+            // 模拟 是否中奖
+
+        if ($('#hasOpen').val() == 1) {
+            hadPrize(canPrize);
+            $('.popPrize,.popMask').show();
+        }
+
+        $('.mainContent').height(
+            $(window).height() - $('.mainFooter').innerHeight()
+        )
+        $(window).resize(function() {
+            $('.mainContent').height(
+                $(window).height() - $('.mainFooter').innerHeight()
+            )
+        })
+
+        // 如果已经注册的话，会让开始游戏按钮黯淡，锤子消失，金蛋切换成打开状态，灯光显示出来
+
+
+
+        // 点击注册的时候模拟注册事件，把 #hasRegister 的值设定为1，表示已经注册了
+        $('#submit_btn').click(function() {
+            $('.popMain,.popMask').fadeOut(300);
+            $('#hasRegister').val('1');
+        })
+
+        /*
+            下面三个事件基本一致，可能会有其他偏差，先分开来写
+            主要就是判断如果还没有注册的话就弹出注册框
+            已经注册并且金蛋没有砸开的话，就可以开始砸金蛋的抽奖了 ---  doPrize()函数
+        */
+        // 点击开始游戏的时候的事件
+
+
+
+        $('#clickStart').click(function() {
+            if ($('#hasRegister').val() == 0) {
+                $('.popMask,.register_form').fadeIn(300);
+            } else if ($('#hasRegister').val() == 1 && $('#hasOpen').val() == 0) {
+                doPrize(canPrize);
+            }
+        });
+
+        // 使用锤子时候的事件
+        $('.hammerM').click(function() {
+            if ($('#hasRegister').val() == 0) {
+                $('.popMask,.register_form').fadeIn(300);
+            } else if ($('#hasRegister').val() == 1 && $('#hasOpen').val() == 0) {
+                doPrize(canPrize);
+            }
+        });
+
+        // 点击金蛋的事件
+        $('.eggM').click(function() {
+            if ($('#hasRegister').val() == 0) {
+                $('.popMask,.register_form').fadeIn(300);
+            } else if ($('#hasRegister').val() == 1 && $('#hasOpen').val() == 0) {
+                doPrize(canPrize);
+            }
+        });
+
+        /*
+            砸金蛋的抽奖函数
+            让开始游戏按钮黯淡，锤子消失，金蛋切换成打开状态，灯光显示出来
+            并且两秒后（两秒待确认，配合大屏的相应时间而定）显示中奖情况
+        */
+        function doPrize(canPrize) {
+            hadPrize(canPrize);
+            $('#joinNumber').val(parseInt($('#joinNumber').val()) + 1);
+            $('.joinNumber').find('.num').html($('#joinNumber').val());
+            $('.popPrize,.popMask').delay(2000).show(0);
+        }
+
+        function hadPrize(canPrize) {
+
+            $('#clickStart').addClass('hadOpen').html('已参与');
+            $('.hammerM').addClass('active');
+
+            if (canPrize == 0) {
+                $('.eggM').attr('src', 'images/open_egg_no.png').css('width', '250px');
+                $('.word1').html('没关系');
+                $('.word2').html('我们再接再厉');
+            } else {
+                $('.eggM').attr('src', 'images/open_egg.png').css('width', '250px');
+                $('.word1').html('恭喜您');
+                $('.word2').html('获得<span>' + prizeState + '</span>');
+                $('.lightM').show();
+            }
+        }
+    })
+    </script>
+</body>
+
+</html>
