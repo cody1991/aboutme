@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container start_page">
+        <div class="row start_logo">
+            <div class="col-xs-12">
+                <img src="images/logo.png" />
+            </div>
+        </div>
+        <div class="row start_main">
+            <div class="col-xs-12">
+                <a href="make_card.html" class="click_to_menu">
+                    <img src="images/start_page_bg_bottom.png" />
+                    <img src="images/text.png" class="logo" />
+                    <img src="images/start_page_bg.png" class="img_all" />
+                </a>
+                <div class="hand">
+                    <img src="images/hand.png">
+                    <div class="hand_after"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="preloader">
+        <div class="container-fluid">
+            <img src="images/load_logo.png" />
+            <div class="spinner">
+                <span class="ball-1"></span>
+                <span class="ball-2"></span>
+                <span class="ball-3"></span>
+                <span class="ball-4"></span>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        setTimeout(function() {
+            $(".preloader").remove();
+        }, 1000);
+    };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+.container {
+    position: relative;
+    max-width: 640px;
+    font-family: 'Microsoft YaHei';
+}
+.tips {
+    z-index: 999;
+    position: absolute;
+    padding: 2px 5px;
+    text-align: center;
+    width: 160px;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    left: 50%;
+    top: 30%;
+    margin-left: -80px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+.music {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    width: 63px;
+    display: block;
+    z-index: 99;
+    overflow: hidden;
+    text-decoration: none;
+}
+.music span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+.music span img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 98;
+}
+.music p {
+    right:28px;
+    line-height: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    position: absolute;
+    margin-bottom: 0;
+    color: #fff;
+    z-index: 98;
+    opacity: 0;
+}
+.music span.music_rotate {
+    -webkit-animation: music_rotate 2s linear both infinite;
+    -moz-animation: music_rotate 2s linear both infinite;
+    animation: music_rotate 2s linear both infinite;
+}
+.s-music {
+    height: 10px;
+    width: 10px;
+    background: url(../images/s-music.png) no-repeat left top;
+    background-size: 100% 100%;
+    top: 16px;
+    right: 8px;
+    position: absolute;
+    z-index: 97;
+    opacity: 0;
+}
+.s-music:first-of-type {
+    height: 10px;
+    width: 10px;
+    background: url(../images/s-music.png) no-repeat left top;
+    background-size: 100% 100%;
+    top: 16px;
+    right: 8px;
+    position: absolute;
+    z-index: 97;
+    -webkit-animation: sse 2s linear both infinite;
+    -moz-animation: sse 2s linear both infinite;
+    animation: sse 2s linear both infinite;
+}
+.s-music:nth-of-type(2) {
+    height: 10px;
+    width: 10px;
+    background: url(../images/s-music.png) no-repeat left top;
+    background-size: 100% 100%;
+    top: 16px;
+    right: 8px;
+    position: absolute;
+    z-index: 97;
+    -webkit-animation: sse1 2s linear both infinite 1s;
+    -moz-animation: sse1 2s linear both infinite 1s;
+    animation: sse1 2s linear both infinite 1s;
+}
+.s-music:nth-of-type(3) {
+    height: 10px;
+    width: 10px;
+    background: url(../images/s-music.png) no-repeat left top;
+    background-size: 100% 100%;
+    top: 16px;
+    right: 8px;
+    position: absolute;
+    z-index: 97;
+    -webkit-animation: sse2 2s linear both infinite 2s;
+    -moz-animation: sse2 2s linear both infinite 2s;
+    animation: sse2 2s linear both infinite 2s;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    outline: none;
+}
+input {
+    -webkit-appearance: none;
+}
+.flex-text-wrap {
+    position: relative;
+    *zoom: 1;
+}
+textarea, .flex-text-wrap {
+    outline: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    *padding-bottom: 0!important;
+}
+.flex-text-wrap textarea, .flex-text-wrap pre {
+    *white-space: pre;
+    *word-wrap: break-word;
+    white-space: pre-wrap;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.flex-text-wrap textarea {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    /* IE7 box-sizing fudge factor */
+    *height: 94%;
+    *width: 94%;
+}
+.flex-text-wrap pre {
+    display: block;
+    visibility: hidden;
+}
+pre {
+    padding: 0;
+}
