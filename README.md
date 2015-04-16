@@ -17,7 +17,36 @@
 拉勾网简历：
 ------------------
 [http://cody1991.github.io/aboutme/lagou-resume.html](http://cody1991.github.io/aboutme/lagou-resume.html)
+
+<hr/> 
  
+个人项目总结：
+------------------
+
+微商城项目，移动前端开发项目：
+
+[主页](http://cody1991.github.io/aboutme/projects/weishang/)
+
+砸金蛋项目，是一个通过砸金蛋抽奖的现场插件，并且有几个不同的版本：
+
+[大屏横屏版本](http://cody1991.github.io/aboutme/projects/egg) / [大屏竖屏版本](http://cody1991.github.io/aboutme/projects/egg/indexV.html) / [大屏竖屏周大福版本](http://cody1991.github.io/aboutme/projects/egg/indexzdf.html) / [手机版本](http://cody1991.github.io/aboutme/projects/egg/mobile.html)
+
+企业官网制作框架。已经把主体框架搭建起来，可以快速完成企业官网：
+
+[主页](http://cody1991.github.io/aboutme/projects/homepage/index.html)
+
+类APP游戏官网，简单的游戏列表以及游戏详情页面
+
+[游戏列表页面](http://cody1991.github.io/aboutme/projects/gameDemo/1.html) / [游戏详情页面](http://cody1991.github.io/aboutme/projects/gameDemo/2.html)
+
+筹钱项目，一个微信上的小游戏，寻找好友帮忙筹钱换取礼物，它有主页、个人筹钱详情和好友帮忙页面：
+
+[主页](http://cody1991.github.io/aboutme/projects/raiseMoney/index.html) / [个人筹钱详情](http://cody1991.github.io/aboutme/projects/raiseMoney/my.html) / [好友帮忙页面](http://cody1991.github.io/aboutme/projects/raiseMoney/share.html)
+
+会员卡系统，也是一个移动前端项目，主要是网站会员的个人信息以及不少活动的页面：
+
+[主页](http://cody1991.github.io/aboutme/projects/memberShip/index.html)
+
 <hr/>
 
 个人github项目总结：
@@ -45,35 +74,6 @@ PopularFrameworkDemo项目，主要是收集和整理日常使用的前端框架
 WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [项目地址](https://github.com/cody1991/webgltang) / [主页](http://cody1991.github.io/webgltang/)
-
-<hr/>
-
-个人项目总结：
-------------------
-
-微商城项目，移动前端开发项目：
-
-[主页](http://cody1991.github.io/aboutme/projects/weishang/)
-
-砸金蛋项目，是一个通过砸金蛋抽奖的现场插件，并且有几个不同的版本：
-
-[大屏横屏版本](http://cody1991.github.io/aboutme/projects/egg) / [大屏竖屏版本](http://cody1991.github.io/aboutme/projects/egg/indexV.html) / [大屏竖屏周大福版本](http://cody1991.github.io/aboutme/projects/egg/indexzdf.html) / [手机版本](http://cody1991.github.io/aboutme/projects/egg/mobile.html)
-
-企业官网制作框架。已经把主体框架搭建起来，可以快速完成企业官网：
-
-[主页](http://cody1991.github.io/aboutme/projects/homepage/index.html)
-
-类APP游戏官网，简单的游戏列表以及游戏详情页面
-
-[游戏列表页面](http://cody1991.github.io/aboutme/projects/gameDemo/1.html) / [游戏详情页面](http://cody1991.github.io/aboutme/projects/gameDemo/2.html)
-
-筹钱项目，一个微信上的小游戏，寻找好友帮忙筹钱换取礼物，它有主页、个人筹钱详情和好友帮忙页面：
-
-[主页](http://cody1991.github.io/aboutme/projects/raiseMoney/index.html) / [个人筹钱详情](http://cody1991.github.io/aboutme/projects/raiseMoney/my.html) / [好友帮忙页面](http://cody1991.github.io/aboutme/projects/raiseMoney/share.html)
-
-会员卡系统，也是一个移动前端项目，主要是网站会员的个人信息以及不少活动的页面：
-
-[主页](http://cody1991.github.io/aboutme/projects/memberShip/index.html)
 
 <hr/>
 
