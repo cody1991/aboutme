@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection" />
+    <title>framework</title>
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.playwx.com/hd/static/codyLib/css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/prefixfree/prefixfree.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://www.playwx.com/hd/static/codyLib/js/html5shiv.min.js"></script>
+      <script src="http://www.playwx.com/hd/static/codyLib/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="home" class="container home">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/slide1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide5.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="pagination"></div>
+        <div class="home_footer">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="logo">
+                    <img src="images/logo.png" />
+                </a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav site">
+                    <li class="menuItem active">
+                        <a href="#home">首页</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#protfolio">产品功能</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#case">案例展示</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#intro">公司简介</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#contact">联系我们</a>
+                    </li>
+                </ul>
+
+                <div class="popMask"></div>
+                <div class="popBody popQQ open">
+                    <p>QQ弹出框</p>
+                    <p>QQ弹出框</p>
+                    <p>QQ弹出框</p>
+                    <p>QQ弹出框</p>
+                    <p>QQ弹出框</p>
+                </div>
+                <div class="popBody popWX">
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                    <p>微信弹出框</p>
+                </div>
+                <div class="popBody popPhone">
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                    <p>手机弹出框</p>
+                </div>
+                <ul class="nav navbar-nav navbar-right contact">
+                    <li>
+                        <a id="popQQ">
+                            <i class='fa fa-weixin fa-2x'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="popWX">
+                            <i class='fa fa-qq fa-2x'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="popPhone">
+                            <i class='fa fa-phone'></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div id="protfolio" class="protfolio">
+            <div class="portfolioTop clearfix">
+                <div class="portfolioFilter">
+                    <ul>
+                        <li>
+                            <a data-filter="*" class="current">全部</a>
+                        </li>
+                        <li>
+                            <a data-filter=".hdsp">互动视频</a>
+                        </li>
+                        <li>
+                            <a data-filter=".xscj">线上插件</a>
+                        </li>
+                        <li>
+                            <a data-filter=".xxcj">线下插件</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="portfolioContainer">
+                <li class="hdsp">
+                    <a>
+                        <img class="item_img" src="images/pro1.png">
+                        <p class="item_title">微团购</p>
+                        <p class="item_intro">通过微信报名团购，即可享受团购价</p>
+                    </a>
+                </li>
+                <li class="xxcj">
+                    <a>
+                        <img class="item_img" src="images/pro2.png">
+                        <p class="item_title">微团购</p>
+                        <p class="item_intro">通过微信报名团购，即可享受团购价</p>
+                    </a>
+                </li>
+                <li class="hdsp">
+                    <a>
+                        <img class="item_img" src="images/pro3.png">
+                        <p class="item_title">微团购</p>
+                        <p class="item_intro">通过微信报名团购，即可享受团购价</p>
+                    </a>
+                </li>
+                <li class="xscj">
+                    <a>
+                        <img class="item_img" src="images/pro4.png">
+                        <p class="item_title">微团购</p>
+                        <p class="item_intro">通过微信报名团购，即可享受团购价</p>
+                    </a>
+                </li>
+                <li class="hdsp">
+                    <a>
+                        <img class="item_img" src="images/pro5.png">
+                        <p class="item_title">微团购</p>
+                        <p class="item_intro">通过微信报名团购，即可享受团购价</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div id="case">
+            <h1>案例展示</h1>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div id="intro">
+            <h1>公司介绍</h1>
+        </div>
+    </div>
+    <div class="container main">
+        <div id="contact">
+            <h1>联系我们</h1>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>©2011-2013 优友, All Rights Reserved. 粤ICP备11076372号-1</p>
+    </div>
+
+    <a href="#top" id="toTop"></a>
+
+
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/idangerous.swiper/idangerous.swiper.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/stickUp/stickUp.min.js"></script>
+    <script type="text/javascript" src="http://www.playwx.com/hd/static/codyLib/js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+
+</html>

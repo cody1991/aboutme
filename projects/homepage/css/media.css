@@ -1,0 +1,39 @@
+@media all and (max-width: 767px) {
+    ul.portfolioContainer li {
+        width: 49%;
+    }
+    .main_body .body_main .body_item {
+        width: 50%;
+    }
+    .home .home_footer .site {
+        width: 75%;
+        float: left;
+        height: auto;
+    }
+    .home .home_footer .site li {
+        float: none;
+        display: block;
+    }
+    .home .home_footer .site li a {
+        background: transparent !important;
+        padding-top: 0;
+        height: auto;
+        font-size: 14px;
+        text-align: left;
+        width: auto;
+        margin: 0;
+    }
+    .home .home_footer .contact {
+        width: 25%;
+        float: right;
+        height: auto;
+    }
+    .home .home_footer .contact li {
+        float: none;
+        display: block;
+    }
+    .home .home_footer .contact li a {
+        margin: 10px auto;
+        display: block;
+    }
+}
