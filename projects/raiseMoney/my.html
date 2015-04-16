@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="telephone=no" name="format-detection" />
+    <title>东部湾 活动页面</title>
+    <link href="http://www.playwx.com/hd/demo/cody/lib/css/normalize.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 
+        掉钱图片
+     -->
+    <input type="hidden" id="money10" value="http://www.playwx.com/hd/demo/cody/11/eastbay/images/money10.png" />
+    <input type="hidden" id="money50" value="http://www.playwx.com/hd/demo/cody/11/eastbay/images/money50.png" />
+    <input type="hidden" id="money100" value="http://www.playwx.com/hd/demo/cody/11/eastbay/images/money100.png" />
+    <input type="hidden" id="bag" value="http://www.playwx.com/hd/demo/cody/11/eastbay/images/bag.png" />
+
+    <input type="hidden" id="sound" value="http://www.playwx.com/hd/demo/cody/11/eastbay/purse.mp3" />
+
+    <input type="hidden" id="isRegister" value="1" />
+    <input type="hidden" id="raiseUnit" value="元宝" />
+
+    <div class="container act">
+        <div class="register_form">
+            <div class="form_main">
+                <h1>登记信息</h1>
+                <a class="close"></a>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        用户名
+                    </span>
+                    <input type="text" class="form-control required " id="username" name="username" placeholder="必填">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        手机号
+                    </span>
+                    <input type="tel" class="form-control required" id="phone" name="phone" placeholder="必填">
+                </div>
+                <button id="submit_btn" type="button" class="button_style">提交</button>
+            </div>
+        </div>
+
+        <div class="act_top">
+            <div class="user_info_wrapper">
+                <div class="user_head">
+                    <img src="images/user_head.png" />
+                </div>
+                <div class="user_info">
+                    <p class="user_name">xiaoxixiaoxixiaoxi</p>
+                </div>
+            </div>
+            <div class="act_btn_wrapper">
+                <div class="rankPop">
+                    <img src="images/rank_icon.png" />
+                    <p>排行榜</p>
+                </div>
+                <div>
+                    <img src="images/purse_icon.png" />
+                    <p id="curr_num">0</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="act_main">
+            <img src="images/purse.png" class="purse" />
+            <p class="tip">为朋友筹得了 <span id="add_money_count"></span> 元</p>
+        </div>
+
+
+        <div class="progress_wrapper">
+            <div class="progress_bar_wrapper">
+                <span class="curr_bar_num"></span>
+                <div class="progress_bar"></div>
+            </div>
+            <div class="progress_bar_num">
+                <span>0元</span>
+                <span><span class="mid_num"></span>元</span>
+                <span><span id="max_num">500</span>元</span>
+            </div>
+            <div class="progress_bar_pic">
+                <span><img src="images/start.png"></span>
+                <span><img src="images/mid.png"></span>
+                <span><img src="images/end.png"></span>
+            </div>
+        </div>
+
+        <div class="act_btn_group">
+
+            <a class="ask_help">
+                <button class="button_style">邀请好友筹钱</button>
+            </a>
+
+            <div>
+
+                <a class="my_link pursePop">
+                    <button class="button_style">我的钱袋</button>
+                </a>
+
+                <a class="rulePop">
+                    <button class="button_style">活动介绍</button>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="popBody ruleBody">
+            <a class="close"></a>
+            <h1>活动规则</h1>
+            <div class="rule_main">
+                <p>活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则</p>
+            </div>
+        </div>
+
+
+        <div class="popBody purseBody">
+            <a class="close"></a>
+            <h1>我的钱包</h1>
+            <div class="progress_wrapper">
+                <div class="progress_bar_wrapper">
+                    <span class="curr_bar_num"></span>
+                    <div class="progress_bar"></div>
+                </div>
+                <div class="progress_bar_num">
+                    <span>0元</span>
+                    <span><span class="mid_num"></span>元</span>
+                    <span><span id="max_num">120</span>元</span>
+                </div>
+            </div>
+
+            <p class="purse_tip">恭喜你中奖了</p>
+
+            <div id="iscroll2_wrap">
+                <ul>
+                    <li>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="word">
+                            <span class="help_name">
+                                lwhdsadasdadsad
+                                <p>开了挖掘机为我坐镇</p>
+                            </span>
+                        <span>+</span>
+                        <span class="help_count">200</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="popBody rankBody">
+            <a class="close"></a>
+            <h1>排行榜</h1>
+            <div id="iscroll_wrap">
+                <ul>
+                    <li>
+                        <span class="num">
+                            <img src="images/top1.png"/>
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            <img src="images/top2.png"/>
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            <img src="images/top3.png"/>
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            4
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            5
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            6
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            7
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            8
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            9
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                    <li>
+                        <span class="num">
+                            10
+                        </span>
+                        <span class="head">
+                            <img src="images/user_head.png"/>
+                        </span>
+                        <span class="name">
+                            xiaoxixiaoxixixixixixixixiixixixixi
+                        </span>
+                        <span class="count">
+                            100
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popMask"></div>
+        <div class="guide">
+            <img src="images/guide.png" />
+        </div>
+
+    </div>
+    <audio id="purseMusic"></audio>
+
+    <script src="http://www.playwx.com/hd/demo/cody/lib/js/jquery-1.10.2.min.js"></script>
+    <script src="http://www.playwx.com/hd/demo/cody/lib/js/fastclick.js"></script>
+    <script src="js/iscroll.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    var isRegister = $('#isRegister');
+
+    var win_H = $(window).height();
+    var scroll_max_H = (win_H - 150);
+    var myScroll2_flag = 0;
+    $('.pursePop').click(function() {
+        $(this).addClass('active');
+
+        if (parseInt(isRegister.val()) == 0) {
+            $('.register_form,.popMask').show();
+        } else {
+            $('.purseBody,.popMask').fadeIn();
+            if (myScroll2_flag == 0) {
+                $('#iscroll2_wrap').css('max-height', scroll_max_H);
+                myScroll2 = new IScroll('#iscroll2_wrap', {
+                    scrollbars: true,
+                    mouseWheel: true,
+                    interactiveScrollbars: true,
+                    shrinkScrollbars: 'scale',
+                    fadeScrollbars: true
+                });
+
+                myScroll2_flag = 1;
+                var thisHeight = $('.purseBody').height();
+                $('.purseBody').css({
+                    'margin-top': -thisHeight / 2,
+                })
+            }
+        }
+
+    });
+    $('.purseBody .close').click(function() {
+        $('.purseBody,.popMask').fadeOut();
+        $('.pursePop').removeClass('active');
+    });
+
+
+    $('.register_form .close').click(function() {
+        $('.register_form,.popMask').fadeOut();
+        $('.act_btn_group a').removeClass('active');
+    });
+    $('.share_help').click(function() {
+        if ($(this).hasClass('can_help')) {
+            $(this).removeClass('can_help');
+            $(this).find('button').html('已经帮TA筹钱了');
+
+            var add_money_count = 50;
+
+            // 增加的钱数
+
+            progress_bar_add(add_money_count);
+            $('.act_main .tip').show();
+            addmoney();
+            var moneyInterval = setInterval(function() {
+                addmoney();
+            }, 500);
+
+            setTimeout(function() {
+                clearInterval(moneyInterval);
+            }, 5000);
+
+            setTimeout(function() {
+                $('.act_main .tip').fadeOut();
+            }, 2000);
+        }
+
+    });
+    </script>
+</body>
+
+</html>

@@ -67,6 +67,10 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [游戏列表页面](http://cody1991.github.io/aboutme/projects/gameDemo/1.html) / [游戏详情页面](http://cody1991.github.io/aboutme/projects/gameDemo/2.html)
 
+筹钱项目，一个微信上的小游戏，寻找好友帮忙筹钱换取礼物，它有主页、个人筹钱详情和好友帮忙页面：
+
+[主页](http://cody1991.github.io/aboutme/projects/raiseMoney/index.html) [个人筹钱详情](http://cody1991.github.io/aboutme/projects/raiseMoney/my.html) [好友帮忙页面](http://cody1991.github.io/aboutme/projects/raiseMoney/share.html)
+
 <hr/>
 
 个人学习案例整合：
