@@ -29,7 +29,7 @@ sysutangzxBlog，个人使用jekyll搭建的博客，日常编写一些前端开
 ------------------
 [gulp -- 用自动化构建工具增强你的工作流程 学习](https://github.com/cody1991/gulp-study)
 
-[sea.js初尝试](https://github.com/cody1991/seajs-study)，[学习笔记](http://cody1991.github.io/sysutangzxBlog/frontend/2015/03/28/seajs-study.html)
+[sea.js初尝试](https://github.com/cody1991/seajs-study), [学习笔记](http://cody1991.github.io/sysutangzxBlog/frontend/2015/03/28/seajs-study.html)
 
 [财付通页面简单页面，主要使用H5C3,less等](http://cody1991.github.io/aboutme/demo/)
 
