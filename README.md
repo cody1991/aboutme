@@ -47,8 +47,7 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [sea.js初尝试项目地址](https://github.com/cody1991/seajs-study) / [学习笔记](http://cody1991.github.io/sysutangzxBlog/frontend/2015/03/28/seajs-study.html)
 
-前端开发介绍：[项目地址](https://github.com/cody1991/front-end-introduction) / [文档地址](http://cody1991.github.io/front-end-introduction/)
-
+[前端开发介绍项目地址](https://github.com/cody1991/front-end-introduction) / [文档地址](http://cody1991.github.io/front-end-introduction/)
 
 [财付通页面简单页面，主要使用H5C3,less等](http://cody1991.github.io/aboutme/demo/)
 
