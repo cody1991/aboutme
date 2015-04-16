@@ -55,6 +55,10 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [项目地址](https://github.com/cody1991/aboutme/tree/gh-pages/projects/weishang) / [主页](http://cody1991.github.io/aboutme/projects/weishang/)
 
+砸金蛋项目，是一个通过砸金蛋抽奖的现场插件，并且有几个不同的版本：
+
+[大屏横屏版本](http://cody1991.github.io/aboutme/projects/egg) / [大屏竖屏版本](http://cody1991.github.io/aboutme/projects/egg/indexV.html) / [大屏竖屏周大福版本](http://cody1991.github.io/aboutme/projects/egg/indexzdf.html) / [手机版本](http://cody1991.github.io/aboutme/projects/egg/mobile.html)
+
 <hr/>
 
 个人学习案例整合：
