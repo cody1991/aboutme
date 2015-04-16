@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta content="telephone=no" name="format-detection" />
+    <title>会员卡 首页</title>
+    <link href="http://www.playwx.com/hd/demo/cody/lib/css/normalize.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="hidden" id="canCheckin" value="1" />
+    <!--
+        1是可以签到
+        0是不可以签到
+     -->
+    <div class="container index">
+        <div class="user_top">
+            <a href="myself.html" class="user_head_wrapper">
+                <img src="images/user_head_img.png" />
+            </a>
+        </div>
+
+        <a href="myself.html" id="username"><span>CODY</span>的会员卡</a>
+
+        <p id="userscore">1600</p>
+
+
+        <p class="link_group">
+            <a href="scoreDetail.html">积分明细 &gt;&gt;</a>
+            <a href="rule.html">会员规则 &gt;&gt;</a>
+        </p>
+
+        <a href="#" class="checkin_btn can"><span class="checkin_text">签到</span><span class="tip"> +1 </span></a>
+
+        <div class="index_menu1">
+            <ul>
+                <li>
+                    <a href="swiper_order.html">
+                        <img src="images/index_menu1_icon1.png" />
+                        <p>我的订单</p>
+                        <p>1</p>
+                    </a>
+                </li>
+                <!--
+                <li>
+                    <a href="#">
+                        <img src="images/index_menu1_icon2.png" />
+                        <p>兑换码</p>
+                        <p>5</p>
+                    </a>
+                </li>
+                 -->
+
+                <li>
+                    <a href="swiper_coupon.html">
+                        <img src="images/index_menu1_icon3.png" />
+                        <p>中奖凭证</p>
+                        <p>5</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="swiper_coupon.html">
+                        <img src="images/index_menu1_icon4.png" />
+                        <p>优惠券</p>
+                        <p>2</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="index_menu2">
+            <ul>
+                <li>
+                    <a href="swiper_act.html">
+                        <div>
+                            <img src="images/index_menu2_icon1.png" />
+                            <div>
+                                <p>积分兑换</p>
+                                <p>Member</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="swiper_act.html">
+                        <div>
+                            <img src="images/index_menu2_icon2.png" />
+                            <div>
+                                <p>超值有礼</p>
+                                <p>Gift</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="swiper_act.html">
+                        <div>
+                            <img src="images/index_menu2_icon3.png" />
+                            <div>
+                                <p>幸运大转盘</p>
+                                <p>Lucky</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="swiper_act.html">
+                        <div>
+                            <img src="images/index_menu2_icon4.png" />
+                            <div>
+                                <p>九元看电影</p>
+                                <p>Movie</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="index_footer">
+            <a href="swiper_act.html">
+                <img src="images/index_footer.png" />
+            </a>
+        </div>
+
+    </div>
+
+    <script src="http://www.playwx.com/hd/demo/cody/lib/js/jquery-1.10.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var canCheckin = parseInt($('#canCheckin').val());
+        if (canCheckin == 0) {
+            $('.checkin_btn').removeClass('can').find('.checkin_text').html('今日已签到');;
+        } else if (canCheckin == 1) {
+            $('.checkin_btn').addClass("can");
+        }
+    })
+
+    $('.checkin_btn').click(function() {
+        $(this).find('.tip').show();
+        $(this).removeClass('can').find('.checkin_text').html('今日已签到');
+
+        var userscore = $('#userscore');
+        var userscoreVal = userscore.html();
+        userscoreVal = parseInt(userscoreVal);
+        var userscoreValAddOne = userscoreVal + 1;
+        userscore.html(userscoreValAddOne);
+    })
+    </script>
+</body>
+
+</html>

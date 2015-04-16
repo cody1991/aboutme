@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta content="telephone=no" name="format-detection" />
+    <title>会员卡 个人资料</title>
+    <link href="http://www.playwx.com/hd/demo/cody/lib/css/normalize.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container myself">
+        <div class="back_top">
+            <a href="index.html" class="back">
+
+            </a>
+            <p class="back_center_text">个人资料</p>
+        </div>
+        <div class="myselfMain">
+            <form>
+                <ul>
+                    <li class="myselfHead">
+                        <span>头像</span>
+                        <span>
+                        <img src="images/user_head_img.png"/>
+                    </span>
+                    </li>
+                    <li class="myselfNickname">
+                        <span>昵称</span>
+                        <span>会淹死的鱼</span>
+                    </li>
+                    <li class="myselfName">
+                        <span>姓名</span>
+                        <span><input type="text" id="myselfName" placeholder="" value="张婷"> &gt;</span>
+                    </li>
+                    <li class="myselfID">
+                        <span>会员号</span>
+                        <span>201101111</span>
+                    </li>
+                    <li class="myselfScore">
+                        <a href="scoreDetail.html">
+                            <span>积分</span>
+                            <span><span>2222</span> &gt;</span>
+                        </a>
+                    </li>
+                    <li class="myselfMobile">
+                        <span>手机</span>
+                        <span><input type="tel" id="myselfMobile" placeholder="" value="15112277883"> &gt;</span>
+                    </li>
+                    <li class="myselfGender">
+                        <span>性别</span>
+                        <span>
+                        <select id="myselfGender">
+                            <option value="female" selected>女</option>
+                            <option value="male">男</option>
+                        </select>&gt;
+                    </span>
+                    </li>
+                    <li class="myselfAge">
+                        <span>年龄</span>
+                        <span><input type="text" id="myselfAge" value="27"> &gt;</span>
+                    </li>
+                    <li class="myselfOrigin">
+                        <span>地区</span>
+                        <span>
+                        <select id="province" name="province">
+
+                        </select>
+                        <select id="city" name="city">
+
+                        </select>&gt;
+                    </span>
+                    </li>
+                    <li class="myselfAddress">
+                        <span>我的地址</span>
+                        <span><input type="text" id="myselfAddress" value="无"> &gt;</span>
+                    </li>
+                </ul>
+                <button class="submit btn_shadow">提交</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="http://www.playwx.com/hd/demo/cody/lib/js/jquery-1.10.2.min.js"></script>
+    <script src="http://www.playwx.com/hd/demo/cody/lib/js/chained/jquery.chained.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <script type="text/javascript">
+    var provinceList = [{
+        'value': 'guangdong',
+        'text': '广东'
+    }, {
+        'value': 'beijing',
+        'text': '北京'
+    }];
+
+    var cityChain = [{
+        'value': 'shenzhen',
+        'text': '深圳',
+        'className': 'guangdong'
+    }, {
+        'value': 'guangzhou',
+        'text': '广州',
+        'className': 'guangdong'
+    }, {
+        'value': 'beijing',
+        'text': '北京',
+        'className': 'beijing'
+    }]
+    $(document).ready(function() {
+
+        for(var i = 0 ; i< provinceList.length; i++){
+            var option = $('<option value ="' + provinceList[i].value + '">' +provinceList[i].text + '</option>' );
+            $('#province').append(option);
+        }
+        for(var i = 0 ; i<  cityChain.length; i++){
+            var option = $('<option value ="' + cityChain[i].value +  '" class = "' + cityChain[i].className +    '">' +cityChain[i].text + '</option>' );
+            $('#city').append(option);
+        }
+
+
+
+        $('#city').chained('#province');
+    })
+    </script>
+
+</body>
+
+</html>

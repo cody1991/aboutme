@@ -69,7 +69,11 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 筹钱项目，一个微信上的小游戏，寻找好友帮忙筹钱换取礼物，它有主页、个人筹钱详情和好友帮忙页面：
 
-[主页](http://cody1991.github.io/aboutme/projects/raiseMoney/index.html) [个人筹钱详情](http://cody1991.github.io/aboutme/projects/raiseMoney/my.html) [好友帮忙页面](http://cody1991.github.io/aboutme/projects/raiseMoney/share.html)
+[主页](http://cody1991.github.io/aboutme/projects/raiseMoney/index.html) / [个人筹钱详情](http://cody1991.github.io/aboutme/projects/raiseMoney/my.html) / [好友帮忙页面](http://cody1991.github.io/aboutme/projects/raiseMoney/share.html)
+
+会员卡系统，也是一个移动前端项目，主要是网站会员的个人信息以及不少活动的页面：
+
+[主页](http://cody1991.github.io/aboutme/projects/memberShip/index.html)
 
 <hr/>
 
