@@ -1,4 +1,4 @@
-在线简历地址：
+在线简历：
 ------------------
 
 [http://cody1991.github.io/aboutme](http://cody1991.github.io/aboutme)
@@ -7,7 +7,7 @@
 
 <hr/>
 
-拉勾网简历地址：
+拉勾网简历：
 ------------------
 [http://cody1991.github.io/aboutme/lagou-resume.html](http://cody1991.github.io/aboutme/lagou-resume.html)
  
@@ -15,9 +15,13 @@
 
 个人github项目总结：
 ------------------
-fullpage插件，主要用于移动前端的邀请函制作：[项目地址](https://github.com/cody1991/fullpage) [DEMO](http://cody1991.github.io/fullpage/)
+fullpage插件，主要用于移动前端的邀请函制作：
 
-sysutangzxBlog，个人使用jekyll搭建的博客，日常编写一些前端开发相关的文章：[项目地址](https://github.com/cody1991/sysutangzxBlog) [博客地址](http://cody1991.github.io/sysutangzxBlog/index.html)
+[项目地址](https://github.com/cody1991/fullpage) [DEMO](http://cody1991.github.io/fullpage/)
+
+sysutangzxBlog，个人使用jekyll搭建的博客，日常编写一些前端开发相关的文章：
+
+[项目地址](https://github.com/cody1991/sysutangzxBlog) [博客地址](http://cody1991.github.io/sysutangzxBlog/index.html)
 
 
 
