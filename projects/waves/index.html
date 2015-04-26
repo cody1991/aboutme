@@ -4,6 +4,7 @@
 <head>
     <title>Waves example</title>
     <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="waves.css" />
     <style>
     .clearfix:before,
@@ -57,10 +58,10 @@
         <img src="demo.jpg" alt="">
     </div>
     <script type="text/javascript" src="zepto.js"></script>
-    <script type="text/javascript" src="waves.min.js"></script>
+    <script type="text/javascript" src="waves.js"></script>
     <script>
     $(function() {
-        Waves.attach($('.button'), ['waves-button', 'waves-float']);
+        Waves.attach($('.button'), ['waves-button', 'waves-float','waves-light']);
 
         Waves.attach($('.pic'), ['waves-block']);
         Waves.init();
