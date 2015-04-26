@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>省市区联动</title>
+    <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        input, select
+        {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -webkit-border-radius: 5px;
+        }
+    </style>
+    <script src="../../js/zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.core.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.select.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+    <script src="../selarea/js/selarea.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            overflow: hidden;
+        }
+        .divcontener
+        {
+            width: 100%;
+        }
+        .divcontener div
+        {
+            margin: 10px;
+            height: 39px;
+        }
+    </style>
+    <script type="text/javascript">
+        function myselback(text, val) {
+            alert(text + ',' + val);
+        }
+        $(function () {
+            var shtml = [];
+            for (var p in objZhArea.area0) {
+                shtml.push('<option value="' + p + '">' + objZhArea.area0[p] + '</option>');
+            }
+            $("#selsheng").html(shtml.join(''));
+            $('#selsheng').scroller('destroy').scroller({ preset: 'select', onSelect: function (text, obj) {
+                initcity(obj.values[0], true, true);
+            }});
+            initcity('110000', true, true);
+            /*
+            生成市
+            isldqu:改变后区是否改变
+            isinitqu:是否同时初始化区
+            */
+            function initcity(shengcode, isldqu, isinitqu) {
+                var citys = objZhArea.area1[shengcode];
+                var htmlcity = [];
+                for (var j = 0; j < citys.length; j++) {
+                    htmlcity.push('<option value="' + citys[j][1] + '">' + citys[j][0] + '</option>');
+                }
+                var options = { preset: 'select' };
+                if (isldqu) {
+                    options.onSelect = function (text, obj) {
+                        initqu(obj.values[0]);
+                    };
+                }
+                $('#selshi').html(htmlcity.join('')).scroller('destroy').scroller(options);
+                if (isinitqu) {
+                    initqu(citys[0][1]);
+                }
+            }
+            /*
+            生成区
+            */
+            function initqu(shicode) {
+                var qus = objZhArea.area2[shicode];
+                var htmlqu = [];
+                for (var k = 0; k < qus.length; k++) {
+                    htmlqu.push('<option value="' + qus[k][1] + '">' + qus[k][0] + '</option>');
+                }
+                $('#selqu').html(htmlqu.join('')).scroller('destroy').scroller({ preset: 'select', onSelect: function (text, obj) {
+                    myselback(text, obj.values[0]);
+                } });
+                myselback(qus[0][0], qus[0][1]);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="divcontener" class="divcontener">
+        <div>
+            <select id="selsheng">
+            </select>
+        </div>
+        <div>
+            <select id="selshi">
+            </select>
+        </div>
+        <div>
+            <select id="selqu">
+            </select>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+.btn {
+	background-color: $white;
+	background-image: none;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	color: $black-text;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $font-size;
+	font-weight: 400;
+	line-height: $line-height;
+	margin-bottom: 0;
+	max-width: 100%;
+	padding: (($btn-height - $line-height - 2) / 2) ($grid-gutter - 1);
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	white-space: nowrap;
+	@include box-shadow(0 1px 5px rgba(0, 0, 0, 0.15), 0 1px 5px rgba(0, 0, 0, 0.15));
+	@include transition(background-color 0.3s $timing, box-shadow 0.3s $timing);
+	@include user-select(none);
+	&:active,
+	&:focus,
+	&:hover {
+		color: $black-text;
+		outline: 0;
+		text-decoration: none;
+		@include box-shadow(0 1px 5px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.15));
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		@include opacity(0.5);
+	}
+	&.waves-effect {
+		border: 0;
+		padding: (($btn-height - $line-height) / 2) $grid-gutter;
+	}
+}
+
+// colour
+	@each $color in $palette-list {
+		$i: index($palette-list, $color);
+		
+		.btn-#{$color} {
+			background-color: nth($palette-color, $i);
+			color: $white;
+			&:active,
+			&:focus,
+			&:hover {
+				color: $white;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				background-color: nth($palette-color, $i);
+			}
+		}
+	}
+
+// size
+	.btn-sm {
+		font-size: $font-size-h6;
+		line-height: ($line-height - 2);
+		padding: 0 ($grid-gutter / 2 - 1);
+		&.waves-effect {
+			padding: 1px ($grid-gutter / 2);
+		}
+	}
+
+.btn-block {
+	display: block;
+	white-space: normal;
+	width: 100%;
+}
+
+.btn-flat {
+	background-color: transparent;
+	@include box-shadow(none);
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: $black-bg;
+		@include box-shadow(none);
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		color: $black-text;
+	}
+}
+
+// colour
+	@each $color in $palette-list {
+		$i: index($palette-list, $color);
+
+		.btn-flat.btn-#{$color} {
+			color: nth($palette-color, $i);
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: nth($palette-color-light, $i);
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: nth($palette-color, $i);
+			}
+		}
+	}
+
+.btn-text {
+	color: $black-text;
+	display: inline-block;
+	font-size: $font-size;
+	font-weight: 400;
+	line-height: $line-height;
+	padding: (($btn-height - $line-height) / 2) 0;
+}

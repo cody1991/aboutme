@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>带初始化的省市区联动</title>
+    <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        input, select
+        {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -webkit-border-radius: 5px;
+        }
+    </style>
+    <script src="../../js/zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.core.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.select.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+    <script src="../selarea/js/selarea.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            overflow: hidden;
+        }
+        .divcontener
+        {
+            width: 100%;
+        }
+        .divcontener div
+        {
+            margin: 10px;
+            height: 39px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            function myselback(text, val) {
+                //alert(text + ',' + val);
+            }
+            var mycode = '130534';
+            var shengcode = mycode.substring(0, 2) + '0000';
+            var shicode = mycode.substring(0, 4) + '00';
+            var shtml = [];
+            for (var p in objZhArea.area0) {
+                shtml.push('<option value="' + p + '">' + objZhArea.area0[p] + '</option>');
+            }
+            $("#selsheng").html(shtml.join(''));
+            $('#selsheng').scroller('destroy').val(shengcode).scroller({ preset: 'select', onSelect: function (text, obj) {
+                initcity(obj.values[0]);
+            }
+            });
+            initcity(shengcode, shicode);
+            /*
+            生成市
+            */
+            function initcity(shengcode, shicode) {
+                var citys = objZhArea.area1[shengcode];
+                var htmlcity = [];
+                for (var j = 0; j < citys.length; j++) {
+                    htmlcity.push('<option value="' + citys[j][1] + '">' + citys[j][0] + '</option>');
+                }
+                var objshi = $('#selshi').html(htmlcity.join('')).scroller('destroy');
+                if (shicode) {
+                    objshi.val(shicode);
+                }
+                objshi.scroller({ preset: 'select', onSelect: function (text, obj) {
+                    initqu(obj.values[0]);
+                } 
+                });
+                if (shicode) {
+                    initqu(shicode, mycode);
+                } else {
+                    initqu(citys[0][1]);
+                }
+            }
+            /*
+            生成区
+            */
+            function initqu(shicode, qucode) {
+                var qus = objZhArea.area2[shicode];
+                var htmlqu = [];
+                for (var k = 0; k < qus.length; k++) {
+                    htmlqu.push('<option value="' + qus[k][1] + '">' + qus[k][0] + '</option>');
+                }
+                var objqu = $('#selqu').html(htmlqu.join('')).scroller('destroy');
+                if (qucode) {
+                    objqu.val(mycode);
+                }
+                objqu.scroller({ preset: 'select', onSelect: function (text, obj) {
+                    myselback(text, obj.values[0]);
+                }
+                });
+                if (qucode) {
+                    myselback(objZhArea.getNameByCode2(mycode), mycode);
+                } else {
+                    myselback(qus[0][0], qus[0][1]);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="divcontener" class="divcontener">
+        <div>
+            <select id="selsheng">
+            </select>
+        </div>
+        <div>
+            <select id="selshi">
+            </select>
+        </div>
+        <div>
+            <select id="selqu">
+            </select>
+        </div>
+    </div>
+</body>
+</html>

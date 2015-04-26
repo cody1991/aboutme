@@ -1,0 +1,35 @@
+@mixin clearfix() {
+	&:after,
+	&:before {
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin form-label() {
+	line-height: $line-height;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: (($input-height - $line-height) / 2);
+	padding-bottom: (($input-height - $line-height) / 2);
+	text-align: right;
+}
+
+@mixin img-responsive() {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 100% \9;
+}
+
+@mixin text-overflow() {
+	display: block;
+	line-height: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

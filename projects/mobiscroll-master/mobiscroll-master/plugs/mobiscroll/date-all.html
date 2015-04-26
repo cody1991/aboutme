@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>日期选择</title>
+
+    <script src="../../js/zepto.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: arial, verdana, sans-serif;
+            font-size: 12px;
+            background: #ddd;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -webkit-border-radius: 5px;
+        }
+
+        .header {
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 -1px 1px black;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#3C3C3C),to(#111));
+            background-image: -webkit-linear-gradient(#3C3C3C,#111);
+            background-image: -moz-linear-gradient(#3C3C3C,#111);
+            background-image: -ms-linear-gradient(#3C3C3C,#111);
+            background-image: -o-linear-gradient(#3C3C3C,#111);
+            background-image: linear-gradient(#3C3C3C,#111);
+        }
+        .header h1 {
+            text-align: center;
+            font-size: 16px;
+            margin: .6em 0;
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .content {
+            padding: 15px;
+            background: #fff;
+        }
+
+        .demo {
+            display: block;
+        }
+
+    </style>
+
+    <script src="js/mobiscroll.zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.core.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.js" type="text/javascript"></script>
+
+    <script src="js/mobiscroll.datetime.js" type="text/javascript"></script>
+    <!-- <script src="js/mobiscroll.select.js" type="text/javascript"></script> -->
+
+    <script src="js/mobiscroll.scroller.ios.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android-ics.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.wp.js" type="text/javascript"></script>
+
+    <script src="js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.android-ics.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.wp.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        $(function () {
+            var curr = new Date().getFullYear();
+            var fun = function () {
+                $('#txttest').scroller('destroy').scroller({
+                    preset: 'date',
+                    minDate: new Date(2012, 3, 10, 9, 22),
+                    maxDate: new Date(2014, 7, 30, 15, 44),
+                    invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },
+                    theme: $('#theme').val(),
+                    mode: $('#mode').val(),
+                    lang: 'zh',
+                    display: $('#display').val(),
+                    animate: $('#animation').val()
+                });
+            }
+            $('.settings select').bind('change', function () {
+                fun();
+            });
+            fun();
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <div  class="header">
+            <h1>Mobiscroll</h1>
+        </div>
+
+        <div class="content">
+            <div class="settings">
+                <div>
+                    <label for="theme">主题样式</label>
+                    <select name="theme" id="theme">
+                        <option value="default">默认</option>
+                        <option value="android-ics">Android ICS</option>
+                        <option value="android-ics light">Android ICS Light</option>
+                        <option value="android">Android</option>
+                        <option value="sense-ui">Sense UI</option>
+                        <option value="ios">iOS</option>
+                        <option value="wp">Windows Phone</option>
+                        <option value="wp light">Windows Phone Light</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mode">模式(滚动/点击/混合)</label>
+                    <select name="mode" id="mode">
+                        <option value="scroller">滚动</option>
+                        <option value="clickpick">点击</option>
+                        <option value="mixed">混合</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="display">显示形式</label>
+                    <select name="display" id="display">
+                        <option value="modal">拾取</option>
+                        <option value="inline">直接</option>
+                        <option value="bubble">气泡</option>
+                        <option value="top">顶部</option>
+                        <option value="bottom">底部</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="animation">动画</label>
+                    <select name="animation" id="animation" class="settings">
+                        <option value="">无</option>
+                        <option value="fade">渐显</option>
+                        <option value="flip">翻转</option>
+                        <option value="pop">弹出</option>
+                        <option value="swing">翻书</option>
+                        <option value="slidehorizontal">从左滑出</option>
+                        <option value="slidevertical">自上而下</option>
+                        <option value="slidedown">从上滑出</option>
+                        <option value="slideup">从下滑出</option>
+                    </select>
+                </div>
+            </div>
+            <div class="demo demo-date demo-datetime demo-time demo-credit">
+                <label for="test">点击下面文本框</label>
+                <input name="test" id="txttest" class="demo-test-date demo-test-datetime demo-test-time demo-test-credit" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

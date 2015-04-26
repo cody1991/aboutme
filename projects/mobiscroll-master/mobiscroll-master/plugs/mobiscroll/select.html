@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>select选择</title>
+    <script src="../../js/zepto.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            padding: 0;
+            margin: 0;
+            font-family: arial, verdana, sans-serif;
+            font-size: 12px;
+            background: #ddd;
+        }
+        input, select
+        {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -webkit-border-radius: 5px;
+        }
+        .header
+        {
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 -1px 1px black;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#3C3C3C),to(#111));
+            background-image: -webkit-linear-gradient(#3C3C3C,#111);
+            background-image: -moz-linear-gradient(#3C3C3C,#111);
+            background-image: -ms-linear-gradient(#3C3C3C,#111);
+            background-image: -o-linear-gradient(#3C3C3C,#111);
+            background-image: linear-gradient(#3C3C3C,#111);
+        }
+        .header h1
+        {
+            text-align: center;
+            font-size: 16px;
+            margin: .6em 0;
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .content
+        {
+            padding: 15px;
+            background: #fff;
+        }
+    </style>
+    <script src="js/mobiscroll.zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.core.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.select.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(function () {
+            $('#selsheng').scroller('destroy').scroller({ preset: 'select' });
+            $('#selshi').scroller('destroy').scroller({ preset: 'select' });
+            $('#selqu').scroller('destroy').scroller({ preset: 'select' });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="header" data-theme="a" class="header">
+            <h1>三级下拉示例</h1>
+        </div>
+        <div>
+            <select id="selsheng" class="demo-test-select" data-role="none">
+                <option value="1">Atlanta</option>
+                <option value="2">Berlin</option>
+                <option value="3">Boston</option>
+                <option value="4">Chicago</option>
+                <option value="5">London</option>
+                <option value="6">Los Angeles</option>
+                <option value="7">New York</option>
+                <option value="8">Paris</option>
+                <option value="9">San Francisco</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <select id="selshi" class="demo-test-select" data-role="none">
+            <option value="1">Atlanta</option>
+            <option value="2">Berlin</option>
+            <option value="3">Boston</option>
+            <option value="4">Chicago</option>
+            <option value="5">London</option>
+            <option value="6">Los Angeles</option>
+            <option value="7">New York</option>
+            <option value="8">Paris</option>
+            <option value="9">San Francisco</option>
+        </select>
+    </div>
+    <div>
+        <select id="selqu" class="demo-test-select" data-role="none">
+            <option value="1">Atlanta</option>
+            <option value="2">Berlin</option>
+            <option value="3">Boston</option>
+            <option value="4">Chicago</option>
+            <option value="5">London</option>
+            <option value="6">Los Angeles</option>
+            <option value="7">New York</option>
+            <option value="8">Paris</option>
+            <option value="9">San Francisco</option>
+        </select>
+    </div>
+</body>
+</html>

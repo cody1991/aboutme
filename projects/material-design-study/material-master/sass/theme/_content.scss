@@ -1,0 +1,79 @@
+.content {
+	padding-bottom: $line-height;
+	.searching & {
+		display: none;
+	}
+}
+
+.content-heading {
+	background-color: $brand-color;
+	color: $white;
+	overflow: hidden;
+	padding-top: ($line-height * 2);
+	position: relative;
+	z-index: 1;
+	@include transition(background-color 0.3s $timing, color 0.3s $timing);
+	@each $color in $palette-list {
+		$i: index($palette-list, $color);
+		
+		.page-#{$color} & {
+			background-color: nth($palette-color, $i);
+		}
+	}
+	.heading {
+		font-weight: 300;
+	}
+}
+
+.content-nav {
+	background-color: $white;
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.5));
+}
+
+.content-sub-heading {
+	color: $brand-color;
+	font-size: $font-size-h4;
+	font-weight: 400;
+	line-height: $line-height-h4;
+	@each $color in $palette-list {
+		$i: index($palette-list, $color);
+		
+		.page-#{$color} & {
+			color: nth($palette-color, $i);
+		}
+	}
+}
+
+// fixed left/right hand side column
+	.content-fix-scroll {
+		margin-right: ($grid-gutter * -1);
+		margin-left: ($grid-gutter * -1);
+		overflow: hidden;
+		padding-right: $grid-gutter;
+		padding-left: $grid-gutter;
+		.content-fix.fixed & {
+			position: fixed;
+				top: ($line-height * 2);
+				bottom: 0;
+		}
+	}
+
+	.content-fix-wrap {
+		.content-fix.fixed & {
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding-right: ($grid-gutter * 2);
+			padding-left: ($grid-gutter * 2);
+			position: absolute;
+				top: 0;
+				right: ($grid-gutter * -1);
+				bottom: 0;
+				left: ($grid-gutter * -1);
+			-webkit-overflow-scrolling: touch;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+		}
+	}
+
+	.row-fix {
+		position: relative;
+	}

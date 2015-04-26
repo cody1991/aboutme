@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>日期选择</title>
+
+
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: arial, verdana, sans-serif;
+            font-size: 12px;
+            background: #ddd;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -webkit-border-radius: 5px;
+        }
+
+        .header {
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 -1px 1px black;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#3C3C3C),to(#111));
+            background-image: -webkit-linear-gradient(#3C3C3C,#111);
+            background-image: -moz-linear-gradient(#3C3C3C,#111);
+            background-image: -ms-linear-gradient(#3C3C3C,#111);
+            background-image: -o-linear-gradient(#3C3C3C,#111);
+            background-image: linear-gradient(#3C3C3C,#111);
+        }
+        .header h1 {
+            text-align: center;
+            font-size: 16px;
+            margin: .6em 0;
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .content {
+            padding: 15px;
+            background: #fff;
+        }
+    </style>
+    <script src="../../js/zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.zepto.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.core.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.js" type="text/javascript"></script>
+
+    <script src="js/mobiscroll.datetime.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.select.js" type="text/javascript"></script>
+
+    <script src="js/mobiscroll.scroller.ios.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.android-ics.js" type="text/javascript"></script>
+    <script src="js/mobiscroll.scroller.wp.js" type="text/javascript"></script>
+
+    <script src="js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript">
+        $(function () {
+            var curr = new Date().getFullYear();
+            var fun = function () {
+                $('#txttest').scroller('destroy').scroller({
+                    preset: 'date',
+                    minDate: new Date(2012, 3, 10, 9, 22),
+                    maxDate: new Date(2014, 7, 30, 15, 44),
+                    invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },
+                    theme: $('#theme').val(),
+                    lang: 'zh'
+                });
+            }
+            $('.settings select').bind('change', function () {
+                fun();
+            });
+            fun();
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <div  class="header">
+            <h1>推荐日期选择形式</h1>
+        </div>
+
+        <div class="content">
+            <div class="settings">
+                <div>
+                    <label for="theme">主题样式</label>
+                    <select name="theme" id="theme">
+                        <option value="default">默认</option>
+                        <option value="sense-ui">安卓</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="test">点击下面文本框</label>
+                <input name="test" id="txttest" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

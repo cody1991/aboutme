@@ -47,6 +47,9 @@
         max-width: 100%;
         width:100%;
     }
+    .waves-effect .waves-ripple{
+        background: rgba(244, 67, 54, 0.7);;
+    }
     </style>
 </head>
 
@@ -61,10 +64,15 @@
     <script type="text/javascript" src="waves.js"></script>
     <script>
     $(function() {
-        Waves.attach($('.button'), ['waves-button', 'waves-float','waves-light']);
 
-        Waves.attach($('.pic'), ['waves-block']);
-        Waves.init();
+        var config = {
+            duration:750
+        }
+
+        Waves.attach($('.button'), ['waves-button', 'waves-float']);
+
+        Waves.attach($('.pic'), ['waves-block','waves-light']);
+        Waves.init(config);
     })
     </script>
 </body>
