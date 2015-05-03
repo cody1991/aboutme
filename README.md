@@ -29,6 +29,9 @@
 
 个人github项目：
 ------------------
+fullpage-pure插件，主要用于移动前端的邀请函制作，优点在于不依赖jquery / zepto ，轻量级插件，并使用自己编写的gulp.js来管理，以及加入了animate.css库来添加元素动画：
+[项目地址](https://github.com/cody1991/fullpage-purejs)
+
 fullpage插件，主要用于移动前端的邀请函制作：
 
 [项目地址](https://github.com/cody1991/fullpage) / [DEMO](http://cody1991.github.io/fullpage/)
