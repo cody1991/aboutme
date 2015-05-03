@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <canvas id="mycanvas" style="border:1px solid skyblue;">
+        不支持canvas
+    </canvas>
+    <script>
+    ;
+    (function() {
+        var mycanvas = document.getElementById('mycanvas');
+        mycanvas.width = 800;
+        mycanvas.height = 400;
+        var context = mycanvas.getContext('2d');
+        
+        context.fillStyle = 'skyblue';
+        context.fillRect(20, 20, 100, 100);
+
+
+        //状态设定！
+        context.beginPath();
+        context.moveTo(150,150);
+        context.lineTo(200,200);
+        context.lineTo(200,300);
+        context.lineTo(150,150);
+        context.closePath();
+
+        context.lineWidth = 5;
+        context.strokeStyle = 'green';
+        // 开始绘制！
+        context.stroke();
+
+        context.fillStyle = 'purple';
+        context.fill();
+
+        context.beginPath();
+        context.moveTo(400,100);
+        context.lineTo(400,200);
+        context.closePath();
+
+        context.strokeStyle = 'yellow';
+        context.stroke();
+    })();
+    </script>
+</body>
+
+</html>
