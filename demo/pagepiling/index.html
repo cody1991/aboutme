@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>pagepiling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div class="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div id="pagepiling">
+
+        <!-- 音乐控制 -->
+        <div class="music_control play">
+            <p class="music_state">开启</p>
+            <span class="music_icon"></span>
+        </div>
+
+        <!-- 滑动提示 -->
+        <div class="swipe_tip">
+            <p></p>
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="section" id="section1">
+
+        </div>
+
+        <div class="section" id="section2">
+
+        </div>
+
+        <div class="section" id="section3">
+
+        </div>
+
+    </div>
+
+    <!-- 音频 -->
+    <audio id="bgm" src="music.mp3"></audio>
+
+    <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.pagepiling.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

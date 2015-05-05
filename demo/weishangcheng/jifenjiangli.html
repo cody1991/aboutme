@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>积分奖励</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!--[if lt IE 9]>
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container simple_page_same_style remove_mar_top">
+		<img src="images/jifenjiangli.jpg" class="img-responsive fenlei_b">
+		<div class="row">
+			<div class="col-md-12">
+				<p> <strong>积分标准</strong>
+				</p>
+				<p>20元1分 珠宝/钟表/数码/电器/美容护理/教育与培训/超市/个别特殊品牌；</p>
+				<p>
+					10元1分 综合服饰/男装/女装/鞋履/箱包/运动服饰/童装/玩具/家居生活/饰品/眼镜/礼品/美发/健身/保健品/餐饮（休闲餐饮、特色餐饮）/摄影/影院/游乐设施等
+				</p>
+				<p> <strong>积分说明：</strong>
+				</p>
+				<ol>
+					<li>具体积分标准以场内公示为准。部分特殊品类或品牌不参与积分。</li>
+					<li>积分金额以单张小票金额为准，不可累计。不满积1分所需金额不积分且恕不累计。</li>
+					<li>首次消费达到入会条件办卡，其金额不计入积分。</li>
+					<li>
+						会员在部分店铺消费出示会员卡可直接积分，店铺内不能办理积分的，请您持消费电脑小票及会员卡移步至客户服务中心咨询办理，消费电脑小票当日有效，逾期不予办理。
+					</li>
+					<li>消费小票当天有效，过期则视为自动放弃积分。</li>
+					<li>京基百纳保留对各品牌店铺销售电脑小票的辨别权和解释权。</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="fixed_back">
+		<a href="huiyuan.html">
+			<img src="images/back-button.png"></a>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+		<div class="container footer">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<a href="index.html">
+						<p class="footer_index">首页</p>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<a href="huodong.html">
+						<p class="footer_huodong">活动</p>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<a href="pinpai_fenlei.html">
+						<p class="footer_pinpai">品牌</p>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<a href="huiyuan.html" class="active">
+						<p class="footer_huiyuan">会员</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files
+        as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	<script type="text/javascript">
+            $(document).ready(function() {
+                $("#owl-demo3").owlCarousel({
+                    items: 3,
+                    margin: 10,
+                    smartSpeed: 450,
+                });
+
+                $("#owl-demo6").owlCarousel({
+                    items: 1,
+                    loop: true,
+                    center: true,
+                    margin: 10,
+                    URLhashListener: true,
+                    autoplayHoverPause: true,
+                    startPosition: 'URLHash'
+                });
+                $("#owl-demo6 .owl-controls").hide();
+
+                $('.louceng_nav li a').click(function() {
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                })
+            });
+        </script>
+</body>
+
+</html>
