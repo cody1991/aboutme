@@ -1,0 +1,149 @@
+body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 960px;
+    line-height: 1.4em;
+    color: #444;
+}
+.center {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.slider-e {
+    background: url(../images/slider-e.jpg) no-repeat center top;
+    min-height: 1250px;
+}
+.slider-e .text {
+    width: 280px;
+    position: absolute;
+    right: 0px;
+    top: 150px;
+}
+.slider .text {
+    font-size: 13px;
+    color: #000;
+}
+.slider .text h3 {
+    color: #cc1d22;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 20px;
+    line-height: 25px;
+}
+.slider-e .cs3 {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 140px;
+}
+.slider-e .cs3-slide-prev {
+    background: url(skins/wood-nav.png) no-repeat left top;
+    width: 20px;
+    height: 33px;
+    position: absolute;
+    left: 90px;
+    ;
+    top: 388px;
+}
+.slider-e .cs3-slide-next {
+    background: url(skins/wood-nav.png) no-repeat left bottom;
+    width: 20px;
+    height: 33px;
+    position: absolute;
+    left: 290px;
+    ;
+    top: 388px;
+}
+.slider-e .cs3-pagination {
+    position: absolute;
+    text-align: center;
+    top: 396px;
+    left: 142px;
+}
+.slider-e .cs3-pagination-switch {
+    width: 10px;
+    height: 10px;
+    background: url(skins/whitepane-pag.png) no-repeat left top;
+    display: inline-block;
+    margin: 0 5px;
+}
+.slider-e .cs3-active-switch {
+    background: url(skins/whitepane-pag.png) no-repeat left bottom;
+}
+.effects {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px 3px 3px 3px;
+    left: 370px;
+    padding: 20px;
+    position: absolute;
+    top: 525px;
+    padding-right: 0;
+    width: 700px
+}
+ul.cs-effects {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    width: 144px;
+    margin-right: 20px
+}
+ul#cs-e-canvas {
+    margin: 0;
+}
+ul.cs-effects li {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+ul.cs-effects li input {
+    margin-right: 5px;
+    vertical-align: middle
+}
+ul.cs-effects li.cs-effects-title {
+    color: #cc1d22;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 10px;
+    line-height: 20px;
+    font-family: 'RobotoCnRegular', Arial, Helvetica, sans-serif;
+}
+ul.cs-effects li.cs-effects-all {
+    font-weight: bold;
+}
+.effects h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+    font-weight: normal;
+    color: #555;
+    text-align: center
+}
+.support {
+    position: absolute;
+    left: 0;
+    top: 620px;
+    width: 350px;
+}
+.support h3 {
+    font-size: 21px;
+    margin: 0 0 10px;
+}
+dt {
+    font-weight: bold;
+    font-size: 16px
+}
+dd {
+    margin-bottom: 20px;
+}
+.sliders {
+    border-top: 5px solid #fff;
+    position: relative;
+    z-index: 1;
+}
+
