@@ -1,0 +1,1212 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+//Colors
+$brand-primary : 		#de5749;
+$brand-primary-light : 	lighten($brand-primary, 20%);
+$brand-primary-dark : 	darken($brand-primary, 20%);
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$brand-other:			#25a7b4;
+
+//Grays
+$gray-darker:           lighten(#000, 13.5%); // #222
+$gray-dark:             lighten(#000, 20%);   // #333
+$gray:                  lighten(#000, 33.5%); // #555
+$gray-light:            lighten(#000, 60%);   // #999
+$gray-lighter:          lighten(#000, 93.5%); // #eee
+
+//Basic Colors
+$white-color : 			#FFFFFF;
+$black-color: 			#000000;
+
+//Font Styling & Sizing
+$font-stack : 			'Open Sans', Tahoma, Arial;
+
+$font-size-base:        14px; //Important To Be 14px For FontAwesome Rendering
+$font-size-large:       ceil(($font-size-base * 1.25)); // ~18px
+$font-size-xlarge:      ceil(($font-size-base * 1.79)); // ~25px
+$font-size-small: 		ceil(($font-size-base * 0.85)); // ~12px
+
+$weight-light: 			300;
+$weight-normal: 		400;
+$weight-semibold: 		600;
+$weight-bold: 			700;
+
+$font-size-h1:          floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:          floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:          ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:          ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:          $font-size-base;
+$font-size-h6:          ceil(($font-size-base * 0.85)); // ~12px
+
+
+//For RTL, Use It For Floatation
+$left: left;
+$right: right;
+
+
+//Ready Borders "Define The Average Size Of The Template Borders"
+$border : 1px solid $gray;
+$borderLight : 1px solid $gray-light;
+$borderDark : 1px solid $gray-dark;
+
+
+//For RTL padding-left, padding-right and absolute positioning
+//Always Put A Value For Both "Auto Or Pixels"
+@mixin padding-left-right($pleft : 0px, $pright : 0px){
+	padding-left: $pleft;
+	padding-right: $pright;
+}
+@mixin margin-left-right($mleft : 0px, $mright : 0px){
+	padding-left: $mleft;
+	padding-right: $mright;
+}
+@mixin absolute-left-right($aleft : 0px, $aright : 0px){
+	left: $aleft;
+	right: $aright;
+}
+
+//Mixins
+
+//Primary Color Gradient
+@mixin primaryGrad($gradDeg: 180 , $gradStart: $brand-primary-light , $gradEnd : $brand-primary){
+	/* Old browsers */
+	background: $gradStart;
+	/* FF3.6+ */
+	background: -moz-linear-gradient($gradDeg,  $gradStart 0%, $gradEnd 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$gradStart), color-stop(100%,$gradEnd));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* W3C */
+	background: linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradStart', endColorstr='$gradEnd',GradientType=0 );
+}
+
+
+//Gray Color Gradient
+@mixin grayGrad($gradDeg: 180 , $gradStart: $gray-lighter , $gradEnd : $gray){
+	/* Old browsers */
+	background: $gradStart;
+	/* FF3.6+ */
+	background: -moz-linear-gradient($gradDeg,  $gradStart 0%, $gradEnd 100%);
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$gradStart), color-stop(100%,$gradEnd));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* W3C */
+	background: linear-gradient($gradDeg,  $gradStart 0%,$gradEnd 100%);
+	/* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradStart', endColorstr='$gradEnd',GradientType=0 );
+}
+
+
+//Border Radius
+@mixin border-radius($radius : 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+//Box Shadow
+@mixin box-shadow($shadow : 0px 1px 3px rgba(0,0,0,.5)) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+
+//Text Shadow
+@mixin text-shadow($tShadow : 0px 1px 3px rgba(0,0,0,.5)) {
+	-webkit-box-shadow: $tShadow;
+	-moz-box-shadow: $tShadow;
+	-o-box-shadow: $tShadow;
+	box-shadow: $tShadow;
+}
+
+
+//Transition
+@mixin transition($transitionvalue : all .25s ease-in-out){
+	-webkit-transition:$transitionvalue;
+	-o-transition:$transitionvalue;
+	-moz-transition:$transitionvalue;
+	transition:$transitionvalue;
+}
+
+@mixin transparent($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	background-color: transparent;
+	background-color: $rgba;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+.backgroundCover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// my mixins for this template 
+
+
+// styling starts from here
+
+body{
+	font-family:$font-stack;
+}
+
+header {
+	color:$black-color;
+	&.masthead{
+		.bannercontainer {
+			width:100%;
+			position:relative;
+			padding:0;
+		}
+		.banner{
+			width:100%;
+			position:relative;
+		}
+		h1{
+			text-transform: uppercase;
+			font-size: 55px;
+			font-weight: bold;
+		}
+		.tp-caption a{
+			color: $white-color;
+			&:hover{
+				color:$gray-lighter;
+			}
+		}
+		h1,h2,h3{
+			color: $white-color;
+		}
+		.mh-slider{
+			position:absolute;
+			bottom:0;
+			top:auto;
+		}
+	}
+}
+
+#slider{
+	background-image:url(../img/bk.jpg);
+	@extend .backgroundCover;
+	overflow:hidden;
+	background-attachment:fixed;
+	position: relative;
+	text-align:center;
+	&:before{
+		content: "";
+		position: absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		background:url(../img/pattern.png) repeat;
+	}
+	.container{
+		position: relative;
+		h1,h3{
+			font-weight: 300;
+			text-transform: capitalize;
+			span{
+				font-weight: bold;
+			}
+		}
+		h1{
+			color: $brand-primary;
+			margin-top: 70px;
+		}
+		h3{
+			margin: 0;
+		}
+		.btn.side{
+			margin-top: 210px;
+		}
+		#carousel-slider{
+			.carousel-inner{
+				.item{
+					img{
+						margin: auto;
+					}
+				}
+			}
+			.carousel-control{
+				background-image:none;
+				padding-top: 45%;
+				.slider-left,.slider-right{
+					background: url(../img/slider.png) no-repeat;
+					display: block;
+					width: 89px;
+					height: 67px;
+					@include transition;
+				}
+				.slider-left{
+					background-position: 0 0;
+					&:hover{
+						background-position: -100px 0;
+					}
+				}
+				.slider-right{
+					background-position: -200px 0;
+					&:hover{
+						background-position: -300px 0;
+					}
+				}
+			}
+		}
+		.btn-group{
+			.btn{
+				background:none;
+				border:none;
+				@include transition;
+				border:1px solid transparent;
+				@include border-radius(3px);
+				span{
+					background: url(../img/sprites.png) no-repeat;
+					display: block;
+					margin: 5px auto;
+					@include transition;
+					&.android{
+						background-position: 0 -150px;
+						width: 37px;
+						height: 43px;
+					}
+					&.apple{
+						background-position: 0 -50px;
+						width: 30px;
+						height: 35px;
+					}
+					&.play{
+						background-position: 0 -250px;
+						width: 31px;
+						height: 33px;
+					}
+					&.windows{
+						background-position: 0 -350px;
+						width: 32px;
+						height: 38px;
+					}
+				}
+				&:hover{
+					border:1px solid $white-color;
+					span{
+						&.android{
+							background-position: 0 -100px;
+						}
+						&.apple{
+							background-position: 0 0;
+						}
+						&.play{
+							background-position: 0 -200px;
+						}
+						&.windows{
+							background-position: 0 -300px;
+						}
+					}
+				}
+			}
+			&.small{
+				.btn{
+					border:none !important;
+					&:hover{
+						border:none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+#nav {
+	width: 100%;
+	position:static;
+	top:-32px;
+	margin-bottom: 0;
+	@include box-shadow($shadow : 0 0 3px rgba(0,0,0,.2));
+	background:$white-color;
+	min-height:70px;
+	border:none !important;
+
+	&.affix {
+		position: fixed;
+		top: 0;
+		z-index: 99999;
+		@include transition;
+	}
+	.navbar-brand{
+		img{
+			margin-top: 3px;
+		}
+	}
+	&.navbar-fixed-top{
+		position: fixed;
+		top:0;
+	}
+	.navbar-toggle{
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 9px;
+		i{
+			font-size:2em;
+		}
+	}
+	.navbar-nav{
+		li{
+			a{
+				text-transform: uppercase;
+				padding-top: 25px;
+				padding-bottom: 24px;
+				font-family: $font-stack;
+				color: darken($gray-light, 10%);
+				@include transition;
+				&:hover{
+					color: $brand-primary;
+					background:none;
+				}
+			}
+			&.active{
+				a{
+					color: $brand-primary;
+				}
+			}
+		}
+		&.social{
+			margin-left: 15px;
+			li{
+				@include transition;
+				a{
+					padding: 25px 5px;
+					i{
+						color: darken($gray-light, 10%);
+					}
+				}
+				&:hover{
+					background:$brand-primary;
+					a{
+						i{
+							color: $white-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+section{
+	padding: 75px 0;
+	&#features{
+		background:$brand-primary;
+		.feature{
+			text-align: center;
+			color: $white-color;
+			.icon{
+				i{
+					border: 1px solid $white-color;
+					color: $white-color;
+					@include border-radius(50%);
+					padding: 15px;
+					width: 2em;
+					height: 2em;
+					padding-top: 26px;
+				}
+			}
+			h4{
+				font-weight: 300;
+				padding: 8px 0;
+			}
+			p{
+				font-weight: 300;
+				font-size: 15px;
+			}
+		}
+		.carousel-indicators{
+			position: relative;
+			bottom: -30px !important;
+			li{			
+				width: 15px;
+				height: 15px;
+				background:$brand-primary-dark;
+				border-color:$brand-primary-dark;
+				@include transition;
+				margin: 3px;
+				&.active{
+					width: 15px;
+					margin: 3px;
+					height: 15px;
+					background:$white-color;
+					border-color:$white-color;
+				}
+			}
+		}
+	}
+	&#download{
+		background-image:url(../img/download_bk.jpg);
+		color: $white-color;
+		@extend .backgroundCover;
+		position: relative;
+		&:after{
+			content: " ";
+			position: absolute;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			background:url(../img/pattern.png) repeat;
+		}
+		.container{
+			position: relative;
+			text-align: center;
+			z-index: 9;
+			h1{
+				font-weight: bold;
+				padding: 50px;
+				margin-top: 80px;
+				font-size: 45px;
+				span{
+					font-weight: 300;
+				}
+			}
+			h4{
+				line-height: 35px;
+				font-weight: 300;
+			}
+			.btn-group{
+				margin:25px 0;
+				.btn{
+					background:none;
+					border:none;
+					@include transition;
+					border:1px solid transparent;
+					@include border-radius(3px);
+					span{
+						background: url(../img/sprites.png) no-repeat;
+						display: block;
+						margin: 10px auto;
+						@include transition;
+						&.android{
+							background-position: 0 -100px;
+							width: 37px;
+							height: 43px;
+						}
+						&.apple{
+							background-position: 0 0;
+							width: 30px;
+							height: 35px;
+						}
+						&.play{
+							background-position: 0 -200px;
+							width: 31px;
+							height: 33px;
+						}
+						&.windows{
+							background-position: 0 -300px;
+							width: 32px;
+							height: 38px;
+						}
+						&.appstore{
+							background-position: -50px 0;
+							width: 202px;
+							height: 48px;
+						}
+						&.playstore{
+							background-position: -50px -50px;
+							width: 197px;
+							height: 43px;
+						}
+						&.micstore{
+							background-position: -50px -100px;
+							width: 228px;
+							height: 56px;
+						}
+					}
+					&:hover{
+						border:1px solid $white-color;
+						span{
+							&.android{
+								background-position: 0 -150px;
+							}
+							&.apple{
+								background-position: 0 -50px;
+							}
+							&.play{
+								background-position: 0 -250px;
+							}
+							&.windows{
+								background-position: 0 -350px;
+							}
+							&.appstore{
+								background-position: -300px 0;
+							}
+							&.playstore{
+								background-position: -300px -50px;
+							}
+							&.micstore{
+								background-position: -300px -100px;
+							}
+						}
+					}
+				}
+				&.small{
+					.btn{
+						border:none !important;
+						&:hover{
+							border:none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	&#settings{
+		color: $white-color;
+		background:$brand-primary;
+		img{
+			margin-left: 30px;
+		}
+		h2{
+			font-weight: bold;
+			text-indent:30px;
+			span{
+				font-weight: 300;
+			}
+		}
+		p{
+			line-height: 25px;
+			padding: 10px 0;
+		}
+		.first{
+			text-indent:30px;
+		}
+		.iphone-settings{
+			bottom: -75px;
+			position: relative;
+		}
+	}
+	&#screenshots{
+		background:$white-color;
+		.section-heading{
+			color:$gray-light;
+			h3{
+				color:$gray-light;
+				span{
+					color: $brand-primary;
+				}
+			}
+			.divider{
+				background:$brand-primary;
+			}
+			p{
+				color:$gray-light;
+			}
+		}
+		.owl-next,.owl-prev{
+			text-align: center;
+			display: block;
+			margin-top: 70px;
+			cursor: pointer;
+			i{
+				width: 50px;
+				height: 50px;
+				border: 1px solid $gray-light;
+				color: $gray-light;
+				border-radius: 50%;
+				padding-top: 11px;
+				padding-right: 5px;
+				@include transition;
+			}
+			&:hover{
+				i{
+					color: $brand-primary;
+					border-color:$brand-primary;
+				}
+			}
+		}
+		.owl-next{
+			i{
+				padding-right: inherit;
+				padding-left: 5px;
+			}
+		}
+		.owl-carousel{
+			.owl-item{
+				margin:0 15px;
+			}
+		}
+	}
+	&#packages{
+		background-image:url(../img/grey.jpg);
+		@extend .backgroundCover;
+		background-attachment:fixed;
+		.section-heading{
+			h3{
+				color: $gray;
+				span{
+					color: $brand-other;
+				}
+			}
+			.divider{
+				background: $brand-other;
+			}
+			p{
+				color: $gray;
+			}
+		}
+		.pack{
+			background:$white-color;
+			text-align: center;
+			border:7px solid $white-color;
+			@include border-radius(3px);
+			@include transition;
+			margin: 35px 0;
+			.heading{
+				background:$brand-other;
+				color:$white-color;
+				@include border-radius(3px 3px 0 0);
+				@include transition;
+				padding: 20px 15px;
+				h3{
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+				h5{
+					text-transform: lowercase;
+				}
+			}
+			.details{
+				background:none;
+				@include transition;
+				@include border-radius(0 0 3px 3px);
+				padding-bottom:20px;
+				ul{
+					list-style: none;
+					padding: 20px 20px 0 20px;
+					li{
+						padding:10px 0;
+						border-top:1px solid $gray-lighter;
+						color: $gray-light;
+						&:first-child{
+							border:none;
+						}
+					}
+				}
+				.btn-sign-up{
+					background:$white-color;
+					color:$brand-other;
+					width: 85%;
+					margin: 0 auto;
+					border-width: 1px;
+					opacity: 0;
+				}
+			}
+			&:hover{
+				border-width:1px;
+				-webkit-transform: translatey(-30px);
+				-moz-transform: translatey(-30px);
+				-ms-transform: translatey(-30px);
+				transform: translatey(-30px);
+				.heading{
+					background:$white-color;
+					color:$brand-other;
+				}
+				.details{
+					background:$brand-other;
+					color:$white-color;
+					ul{
+						li{
+							border-color:lighten($brand-other, 5%);
+							color: $white-color;
+						}
+					}
+					.btn-sign-up{						
+						background:$brand-other;
+						color:$white-color;
+						opacity: 1;
+						-webkit-transform: translatey(45px);
+						-moz-transform: translatey(45px);
+						-ms-transform: translatey(45px);
+						-o-transform: translatey(45px);
+						transform: translatey(45px);
+					}
+				}
+			}
+		}
+	}
+	&#testimonials{
+		background:$brand-other;
+		padding-top: 0;
+		padding-bottom:15px;
+		.carousel{
+			top: -25px;
+			.carousel-inner{
+				.item{
+					.carousel-caption{
+						position: relative;
+						left:0;
+						right:0;
+						bottom:0;
+					}
+					img{
+						width:130px;
+						margin: auto;
+						border: 5px solid $brand-other;
+						@include border-radius(3px);
+					}
+				}
+				h3{
+					text-shadow: none;
+					font-weight: 300;
+				}
+				h2{
+					font-size: 27px;
+					font-weight: bold;
+					text-shadow: none;
+				}
+			}
+			.carousel-indicators{
+				position: relative;
+				bottom:0;
+				li{
+					width:18px;
+					height:18px;
+					border-width:2px;
+					margin:0;
+					&.active{
+						width:18px;
+						height:18px;
+					}
+				}
+			}
+		}
+	}
+	&#team{
+		background:$brand-primary;
+		.car-next,.car-prev{
+			text-align: center;
+			display: block;
+			margin-top: 60px;
+			cursor: pointer;
+			i{
+				width: 50px;
+				height: 50px;
+				border: 1px solid $white-color;
+				color: $white-color;
+				border-radius: 50%;
+				padding-top: 11px;
+				padding-right: 5px;
+				@include transition;
+			}
+			&:hover{
+				i{
+					color: $brand-primary-light;
+					border-color:$brand-primary-light;
+				}
+			}
+		}
+		.car-next{
+			i{
+				padding-right: inherit;
+				padding-left: 5px;
+			}
+		}
+		.member{
+			border: 1px solid $white-color;
+			color: $white-color;
+			padding: 20px;
+			margin: 30px 0;
+			@include transition;
+			img{
+				width: 150px;
+				border: 2px solid $white-color;
+			}
+			.media{
+				.pull-left{
+					margin-right: 20px;
+				}
+				.media-heading{
+					font-weight: bold;
+					padding-top: 2px;
+					font-size: 20px;
+					ul{
+						padding: 0;
+						list-style: none;
+						display: inline;
+						margin: 0;
+						float: right;
+						li{
+							float: left;
+							a{
+								i{
+									color:$white-color;
+									margin:0 5px;
+									@include transition;
+									&:hover{
+										color: $gray;
+									}
+								}
+							}
+						}
+					}
+				}
+				p{
+					font-weight: 300;
+					margin:0;
+				}
+				span.divider{
+					width: 40%;
+					height: 1px;
+					background: $white-color;
+					display: block;
+					margin: 10px 0;
+					@include transition;
+				}
+			}
+			&:hover{
+				background:$white-color;
+				color:$gray;
+				.media-heading{
+					color:$brand-primary;
+					ul{
+						li{
+							a{
+								i{
+									color:$brand-primary;
+								}
+							}
+						}
+					}
+				}
+				span.divider{
+					background:$gray;
+				}
+			}
+		}
+	}
+	&#subscribe{
+		background-image:url(../img/grey.jpg);
+		@extend .backgroundCover;
+		position: relative;
+		padding:0;
+		color: $white-color;
+		&:before{
+			content: "";
+			position: absolute;
+			top:0;
+			right:0;
+			left:0;
+			bottom:0;
+			@include transparent($brand-other, .5);
+		}
+		.newsletter-wrapper{
+			padding:50px 0;
+		}
+		h3{
+			font-weight:300;
+			color: $white-color;
+			text-transform: uppercase;
+			span{
+				font-weight: bold;
+			}
+		}
+		span.divider{
+			display: block;
+			width:30%;
+			height: 1px;
+			background:$white-color;
+			margin: 20px 0;
+		}
+		p{
+			font-weight: 300;
+			font-size: 15px;
+		}
+		.form-group{
+			margin: 25px 0;
+			.form-control{
+				height: 60px;
+				padding-right: 97px;
+				font-size: 20px;
+				padding: 6px 20px;
+				@include border-radius(2px);
+			}
+			.form-control-feedback{
+				top: 13px;
+				right: 20px;
+				width: inherit;
+				border:none;
+				background:$brand-other;
+				color:$white-color;
+				@include border-radius(3px);
+				text-transform: uppercase;
+				padding: 0 15px;
+				font-weight: bold;
+				@include transition;
+				&:hover{
+					background: darken($brand-other, 8%);
+				}
+			}
+		}
+		img{
+			margin-top: -65px;
+		}
+	}
+	&#map{
+		height: 450px;
+	}
+	&#sponsors{
+		background:$white-color;
+	}
+}
+
+footer{
+	background-image:url(../img/grey.jpg);
+	@extend .backgroundCover;
+	position: relative;
+	padding:5px 0;
+	color: $white-color;
+	&:before{
+		content: "";
+		position: absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		@include transparent($brand-other, .5);
+	}
+	.spirat{
+		padding: 0 0 0 15px;
+	}
+	form{	
+		.form-control{
+			padding: 20px 15px;
+		}
+		.btn{
+			padding: 8px 18px;
+			background:#2e2e2e;
+			color: $white-color;
+			border-color:#2e2e2e;
+			&:hover{
+				border-color:lighten(#2e2e2e, 5%);
+				background:lighten(#2e2e2e, 5%);
+				color: $white-color;
+			}
+		}
+	}
+	.social{
+		text-align: center;
+		margin: 25px 0;
+		ul{
+			padding:0;
+			list-style: none;
+			display: inline-block;
+			text-align: center;
+			li{
+				margin: 0 1px;
+				float: left;
+				a{
+					padding: 15px;
+					@include border-radius(50%);
+					width: 50px;
+					height: 50px;
+					display: inline-block;
+					i{
+						color:$white-color;
+						@include transition;
+					}
+					&:hover{
+						background: $white-color;
+						i{
+							color:$brand-other;
+						}
+					}
+				}
+			}
+		}
+	}
+	.rights{
+		color: $white-color;
+		font-weight: 300;
+		text-align: center;
+		font-size: 15px;
+		span{
+			font-weight: bold;
+		}
+		a{
+			color:$white-color;
+		}
+	}
+}
+
+.form-control{
+	@include border-radius(0px);
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	border:none;
+}
+
+.btn:active, .btn.active{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.btn{
+	@include border-radius(3px);
+	text-transform:uppercase;
+	font-weight:bold;
+	@include transition;
+	padding: 12px 18px;
+	border:2px solid $white-color;
+	margin-right:10px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	&:hover{
+		border:2px solid $white-color;
+	}
+}
+
+.btn.btn-default{
+	background:$white-color;
+	color:$brand-primary;
+	&:hover{
+		background:none;
+		color: $white-color;
+	}
+}
+
+.btn.btn-empty{
+	background:none;
+	color:$white-color;
+	&:hover{
+		background:$white-color;
+		color:$brand-primary;
+	}
+}
+
+a{
+	@include transition;
+}
+
+
+.section-heading {
+	text-align: center;
+	padding: 30px 0;
+	color: $white-color;
+	h1,h2,h3{
+		text-transform: uppercase;
+		color: $white-color;
+	}
+	h4,p{
+		color: $white-color;
+		line-height: 22px;
+	}
+	i{
+		color: lighten($gray-light, 25%);
+	}
+	span{
+		font-weight: bold;
+	}
+	span.divider{
+		position: relative;
+		height: 2px;
+		width:15%;
+		background: $white-color;
+		display: block;
+		margin: 10px auto;
+	}
+}
+
+.scrollpoint{
+	opacity:0;
+	&.active{
+		opacity: 1 \0;
+	}
+}
+
+.pre-loader {
+	position: fixed;
+	background: #ecf0f1;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	display: block;
+	.load-con {
+		margin: 20% auto;
+		position: relative;
+		text-align: center;
+	}
+}
+
+.spinner {
+  margin: 50px auto 0;
+  width: 70px;
+  text-align: center;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #bdc3c7;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+	#nav .navbar-nav li a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
