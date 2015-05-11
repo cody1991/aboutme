@@ -43,14 +43,16 @@
         background: orange;
     }
     
-    .pic{
+    .pic {
         display: inline-block;
     }
+    
     .pic img {
-        max-width: 100%;        
+        max-width: 100%;
     }
-    .waves-effect .waves-ripple{
-        background: rgba(244, 67, 54, 0.7);;
+    
+    .waves-effect .waves-ripple {
+        background: rgba(244, 67, 54, 0.7);
     }
     </style>
 </head>
@@ -68,12 +70,12 @@
     $(function() {
 
         var config = {
-            duration:4000
+            duration: 750
         }
 
         Waves.attach($('.button'), ['waves-button', 'waves-float']);
 
-        Waves.attach($('.pic'), ['waves-block','waves-light']);
+        Waves.attach($('.pic'), ['waves-block', 'waves-light']);
         Waves.init(config);
     })
     </script>
