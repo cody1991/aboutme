@@ -114,3 +114,7 @@ p {
 #done {
     height: 100%;
 }
+
+.skrollr-mobile .skrollable {
+    position:absolute;
+ }
