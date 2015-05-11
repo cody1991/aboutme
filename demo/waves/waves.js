@@ -1,5 +1,5 @@
 /*!
- * Waves v0.7.0
+ * Waves v0.7.2
  * http://fian.my.id/Waves
  *
  * Copyright 2014 Alfiana E. Sibuea and other contributors
@@ -179,51 +179,72 @@
             for (var i = 0, len = ripples.length; i < len; i++) {
                 removeRipple(e, element, ripples[i]);
             }
-        },
-
-        // Little hack to make <input> can perform waves effect
-        wrapInput: function(elements) {
-
-            for (var i = 0, len = elements.length; i < len; i++) {
-
-                var element = elements[i];
-
-                if (element.tagName.toLowerCase() === 'input') {
-
-                    var parent = element.parentNode;
-
-                    // If input already have parent just pass through
-                    if (parent.tagName.toLowerCase() === 'i' && parent.classList.contains('waves-effect')) {
-                        continue;
-                    }
-
-                    // Put element class and style to the specified parent
-                    var wrapper       = document.createElement('i');
-                    wrapper.className = element.className + ' waves-input-wrapper';
-                    element.className = 'waves-button-input';
-
-                    // Put element as child
-                    parent.replaceChild(wrapper, element);
-                    wrapper.appendChild(element);
-
-                    // Apply element color and background color to wrapper
-                    var elementStyle    = window.getComputedStyle(element, null);
-                    var color           = elementStyle.color;
-                    var backgroundColor = elementStyle.backgroundColor;
-
-                    wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
-                    element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
-                }
-            }
         }
     };
+    
+    /**
+     * Collection of wrapper for HTML element that only have single tag
+     * like <input> and <img>
+     */
+    var TagWrapper = {
+        
+        // Wrap <input> tag so it can perform the effect
+        input: function(element) {
+            
+            var parent = element.parentNode;
 
+            // If input already have parent just pass through
+            if (parent.tagName.toLowerCase() === 'i' && parent.classList.contains('waves-effect')) {
+                return;
+            }
+
+            // Put element class and style to the specified parent
+            var wrapper       = document.createElement('i');
+            wrapper.className = element.className + ' waves-input-wrapper';
+            element.className = 'waves-button-input';
+
+            // Put element as child
+            parent.replaceChild(wrapper, element);
+            wrapper.appendChild(element);
+
+            // Apply element color and background color to wrapper
+            var elementStyle    = window.getComputedStyle(element, null);
+            var color           = elementStyle.color;
+            var backgroundColor = elementStyle.backgroundColor;
+
+            wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
+            element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
+            
+        },
+        
+        // Wrap <img> tag so it can perform the effect
+        img: function(element) {
+            
+            var parent = element.parentNode;
+
+            // If input already have parent just pass through
+            if (parent.tagName.toLowerCase() === 'i' && parent.classList.contains('waves-effect')) {
+                return;
+            }
+
+            // Put element as child
+            var wrapper  = document.createElement('i');
+            parent.replaceChild(wrapper, element);
+            wrapper.appendChild(element);
+            
+        }
+    };
 
     /**
      * Hide the effect and remove the ripple. Must be
      * a separate function to pass the JSLint...
      */
     function removeRipple(e, el, ripple) {
+        
+        // Check if the ripple still exist
+        if (!ripple) {
+            return;
+        }
 
         ripple.classList.remove('waves-rippling');
 
@@ -419,9 +440,6 @@
             Effect.delay = options.delay;
         }
 
-        //Wrap input inside <i> tag
-        Effect.wrapInput($$('.waves-effect'));
-
         if (isTouchAvailable) {
             body.addEventListener('touchstart', showEffect, false);
             body.addEventListener('touchcancel', TouchHandler.registerEvent, false);
@@ -438,6 +456,7 @@
      * or skimming effect should be applied to the elements.
      */
     Waves.attach = function(elements, classes) {
+        
         elements = getWavesElements(elements);
 
         if (toString.call(classes) === '[object Array]') {
@@ -446,12 +465,15 @@
 
         classes = classes ? ' ' + classes : '';
 
-        var element;
+        var element, tagName;
+        
         for (var i = 0, len = elements.length; i < len; i++) {
+            
             element = elements[i];
-
-            if (element.tagName.toLowerCase() === 'input') {
-                Effect.wrapInput([element]);
+            tagName = element.tagName.toLowerCase();
+            
+            if (['input', 'img'].indexOf(tagName) !== -1) {
+                TagWrapper[tagName](element);
                 element = element.parentElement;
             }
 
