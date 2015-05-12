@@ -1,0 +1,39 @@
+.container {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    max-width: 640px;
+    position: relative;
+    margin: 0 auto;
+}
+
+button {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+body {
+    background: #F17370;
+}
+
+#test {
+    position: relative;
+}
+
+#imac {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+#imac.show {
+    opacity: 1;
+}
