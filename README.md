@@ -61,6 +61,8 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 个人学习案例：
 ------------------
+[前端开发优化](http://cody1991.github.io/sysutangzxBlog/frontend/2015/05/06/effective-front-end.html) 
+
 [canvas学习案例-倒计时](http://cody1991.github.io/aboutme/demo/canvas/4.html) / [canvas学习案例-时钟](http://cody1991.github.io/aboutme/demo/canvas/5.html)
 
 [根据google material desing弄的按钮涟漪效果](http://cody1991.github.io/aboutme/demo/waves)
