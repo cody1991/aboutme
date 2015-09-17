@@ -8,7 +8,7 @@
 自我介绍：
 ------------------
 
-2014年的中山大学软件工程本科毕业生，2014年4月份开始前端开发工作。有坚实的前端开发基础，又能不断学习新的知识。在第一家公司接近一年的工作中，基本都在制作微信端的页面，非常熟悉移动前端开发。能熟练使用HTML5，CSS3和JS（jquery、zepto)，长期活跃在github上，有个人的 [技术博客](http://cody1991.github.io/sysutangzxBlog/index.html) ，对于流行的前端开发框架，如Bootstrap、Foundation5都有实际开发项目。英语已过六级，对英文书籍和网站的阅读无多少障碍。如今也在不断地接触着新的技术，在MVC前端框架中选择了angular.js作为深入学习的对象。也有在项目中使用less预处理语言。能简单使用sea.js、gulp.js、node.js等前沿技术并在不断深入学习中。非常热爱读书，听歌，游泳和动漫等等。
+2014年的中山大学软件工程本科毕业生，2014年4月份开始前端开发工作。有坚实的前端开发基础，又能不断学习新的知识。在第一家公司接近一年的工作中，基本都在制作微信端的页面，非常熟悉移动前端开发。能熟练使用HTML5，CSS3和JS（jquery、zepto)，长期活跃在github上，有个人的 [技术博客](http://cody1991.github.io/index.html) ，对于流行的前端开发框架，如Bootstrap、Foundation5都有实际开发项目。英语已过六级，对英文书籍和网站的阅读无多少障碍。如今也在不断地接触着新的技术，在MVC前端框架中选择了angular.js作为深入学习的对象。也有在项目中使用less预处理语言。能简单使用sea.js、gulp.js、node.js等前沿技术并在不断深入学习中。非常热爱读书，听歌，游泳和动漫等等。
 
 <hr/>
 
@@ -37,9 +37,9 @@ fullpage插件，主要用于移动前端的邀请函制作：
 
 [项目地址](https://github.com/cody1991/fullpage) / [DEMO](http://cody1991.github.io/fullpage/)
 
-sysutangzxBlog，个人使用jekyll搭建的博客，日常编写一些前端开发相关的文章：
+个人使用jekyll搭建的博客，日常编写一些前端开发相关的文章：
 
-[项目地址](https://github.com/cody1991/sysutangzxBlog) / [博客地址](http://cody1991.github.io/sysutangzxBlog/index.html)
+[项目地址](https://github.com/cody1991) / [博客地址](http://cody1991.github.io/index.html)
 
 mylib，主要是存放着自己常用的一些框架和库：
 
@@ -61,7 +61,7 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 个人学习案例：
 ------------------
-[前端开发优化](http://cody1991.github.io/sysutangzxBlog/frontend/2015/05/06/effective-front-end.html) 
+[前端开发优化](http://cody1991.github.io/frontend/2015/05/06/effective-front-end.html) 
 
 [canvas学习案例-倒计时](http://cody1991.github.io/aboutme/demo/canvas/4.html) / [canvas学习案例-时钟](http://cody1991.github.io/aboutme/demo/canvas/5.html)
 
@@ -69,7 +69,7 @@ WebGL 3D前端页面开发，使用three.js框架搭建：
 
 [gulp -- 用自动化构建工具增强你的工作流程 学习](https://github.com/cody1991/gulp-study)
 
-[sea.js初尝试项目地址](https://github.com/cody1991/seajs-study) / [学习笔记](http://cody1991.github.io/sysutangzxBlog/frontend/2015/03/28/seajs-study.html)
+[sea.js初尝试项目地址](https://github.com/cody1991/seajs-study) / [学习笔记](http://cody1991.github.io/frontend/2015/03/28/seajs-study.html)
 
 [前端开发介绍项目地址](https://github.com/cody1991/front-end-introduction) / [文档地址](http://cody1991.github.io/front-end-introduction/)
 
