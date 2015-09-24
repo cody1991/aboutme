@@ -13,7 +13,7 @@ github项目：
 
 个人博客，编写有关前端开发的博文
 
-[项目地址](https://github.com/cody1991/cody1991.github.io) / [主页](cody1991.github.io)
+[项目地址](https://github.com/cody1991/cody1991.github.io) / [主页](http://cody1991.github.io)
 
 gulp模板，自己写的一套gulp模板，可优化前端开发流程
 
