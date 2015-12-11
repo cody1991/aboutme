@@ -5,6 +5,7 @@
 
 英文版暂停更新。
 
+欢迎CLONE此项目来构建你自己的在线简历，git page的使用可看个人的博客文章[Github Pages Introduction](http://cody1991.github.io/github/2015/04/04/github-pages-introduction.html)
 
 <hr/>
 
