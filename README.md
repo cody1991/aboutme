@@ -45,7 +45,7 @@ PopularFrameworkDemo项目，主要是收集和整理日常使用的前端框架
 ## License
 The MIT License (MIT)
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2016 cody1991
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
