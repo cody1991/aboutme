@@ -760,7 +760,7 @@ header {
 
 .technical .skills h4 {
     font-weight: 700;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 17px;
     line-height: 27px;
     padding-bottom: 11px;
