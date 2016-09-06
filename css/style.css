@@ -593,8 +593,8 @@ header {
 }
 
 .aboutCont {
-    padding-bottom: 78px;
-    padding-left: 48px;
+    // padding-bottom: 78px;
+    // padding-left: 48px;
 }
 
 .aboutme .proPic img {
@@ -616,7 +616,7 @@ header {
     // height: 250px;
     overflow: hidden;
     position: relative;
-    padding-right: 50px;
+    // padding-right: 50px;
     margin-bottom: 60px;
     text-align: justify;
 }
@@ -843,7 +843,7 @@ header {
 .exprience .heading p {
     padding-bottom: 54px;
     max-width: 660px;
-    text-align: center;
+    text-align: justify;
     display: block;
     margin: 0 auto;
     color: #897f8a;
