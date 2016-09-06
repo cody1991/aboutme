@@ -67,7 +67,6 @@
 
 
 
-
     // for portfoli lightbox jquary
     jQuery(function($) {
         /*var $chosenSheet,
@@ -77,8 +76,6 @@
 	$( ".lb" ).rlightbox();
 	$( ".lb_title-overwritten" ).rlightbox({overwriteTitle: true});*/
     });
-
-
 
 
 
@@ -92,9 +89,8 @@
 
                 if (width > 768) {
                     var topMax = 100;
-                }
-                else{
-                	topMax = 1500;
+                } else {
+                    topMax = 1500;
                 }
                 if (top < topMax) {
                     if (index == 0) {
@@ -159,7 +155,6 @@
 
 
 
-
     // Somth page scroll
 
 
@@ -204,15 +199,9 @@
 
 
 
-
-
     // chart loding
     $(window).load(function() {
-
         var chart = window.chart = $('.chart').data('easyPieChart');
-        $('.js_update').on('click', function() {
-            chart.update(Math.random() * 100);
-        });
     });
 
 }(jQuery));
