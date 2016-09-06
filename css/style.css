@@ -612,11 +612,16 @@ header {
 }
 
 #description {
-    height: 250px;
+    // height: 250px;
     overflow: hidden;
     position: relative;
     padding-right: 50px;
     margin-bottom: 60px;
+    text-align: justify;
+}
+
+#description p {
+    padding-bottom: 10px;
 }
 
 #description .ps-scrollbar-x-rail {
@@ -1784,4 +1789,14 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 
 img[src*="baidu"] {
     display: none;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Microsoft YaHei', sans-serif;
 }
