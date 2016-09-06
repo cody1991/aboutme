@@ -171,6 +171,7 @@ header {
     overflow: hidden;
     margin: 0 auto !important;
     background: #CACACA;
+    display: none;
 }
 
 .bannerText {
