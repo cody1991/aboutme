@@ -29,6 +29,14 @@
 /* 1. CSS Reset
 -------------------------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot");
+    src: local('Open Sans'), local('OpenSans'), url("../font/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot") format('embedded-opentype'), url("../font/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format('woff');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -1003,7 +1011,7 @@ header {
     padding-bottom: 41px;
     margin: 0 auto;
     max-width: 660px;
-    text-align: center;
+    text-align: justify;
 }
 
 .portfolioTop {
@@ -1112,8 +1120,8 @@ span.hoverBox a {
 }
 
 span.hoverBox .title {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 20px;
     position: absolute;
     top: 0;
@@ -1134,10 +1142,10 @@ span.hoverBox .smallIcon {
     height: 56px;
     margin: 0px auto;
     position: absolute;
-    top: 50%;
+    bottom: 20px;
     left: 50%;
     margin-left: -28px;
-    margin-top: -28px;
+    // margin-top: -28px;
 }
 
 span.hoverBox .linKed {
