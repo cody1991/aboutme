@@ -154,7 +154,7 @@ h4.subHeading {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1080px;
     /*padding:0;*/
 }
 
@@ -663,7 +663,7 @@ header {
 }
 
 .aboutme .heading {
-    text-align: left;
+    text-align: center;
     padding-top: 78px;
     padding-bottom: 26px;
 }
@@ -706,7 +706,7 @@ header {
 .technical .heading p {
     padding-bottom: 41px;
     max-width: 660px;
-    text-align: center;
+    text-align: justify;
     display: block;
     margin: 0 auto;
 }
