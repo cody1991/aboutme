@@ -513,7 +513,7 @@ header {
 }
 
 .navbar.navbar-inverse.navbar-static-top .nav li {
-    padding: 0 0 0 36px;
+    padding: 0 18px 0 18px;
 }
 
 .navbar.navbar-inverse.navbar-static-top .nav li a {
@@ -1256,9 +1256,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
  14. Reffernces Style
 ------------------------------------------------------*/
 
-.reffernces {
-    background: #f8f7f8;
-}
+.reffernces {}
 
 .reffernces .container {
     padding-bottom: 123px;
@@ -1327,7 +1325,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 ------------------------------------------------------*/
 
 .contact {
-    background: #fff;
+    background: #f8f7f8;
 }
 
 .contact .container {
@@ -1383,7 +1381,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 
 .contactDetails {
-    background: #ffffff;
+    background: #f8f7f8;
 }
 
 .contactDetails .container {
