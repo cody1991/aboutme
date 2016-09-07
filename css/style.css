@@ -504,8 +504,8 @@ header {
     line-height: 140px;
     text-align: center;
     font-weight: 800;
-    transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    // transition-duration: 0.2s;
+    // -webkit-transition-duration: 0.2s;
 }
 
 .navbar.navbar-inverse.navbar-static-top .nav li.first {

@@ -394,16 +394,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.waterfall.js"></script>
-    <script src="js/custom.js"></script>
     <script src="js/stickUp.js"></script>
     <script type="text/javascript">
     jQuery(function($) {
         $(document).ready(function() {
             //enabling stickUp on the '.navbar-wrapper' class
-            $(".totop").click(function(e) {
-                e.preventDefault();
-                $(".homeLink a").trigger("click");
-            })
+
             $('.navbar-wrapper').stickUp({
                 parts: {
                     0: 'wrapper',
@@ -418,26 +414,11 @@
                 topMargin: 'auto'
             });
         });
-
-        $(".navbar.navbar-inverse.navbar-static-top a").click(function() {
-            $(".navbar-collapse").addClass("collapse").removeClass('in');
-        });
-
-        $(".navbar-toggle").click(function() {
-            $(".navbar-collapse").removeClass("hideClass");
-        });
-
-
     });
     </script>
     <script src="js/jquery.superslides.js"></script>
-    <script>
-    $('#banner').show().superslides({
-        animation: 'fade',
-        play: 2000
-    });
-    </script>
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="js/jquery.easypiechart.js"></script>
 </body>
 
