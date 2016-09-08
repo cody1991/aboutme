@@ -114,7 +114,7 @@ $(document).ready(function(e) {
 
                     if (target.length) {
                         $('html,body').animate({
-                            scrollTop: target.offset().top - 140
+                            scrollTop: target.offset().top
                         }, 1000);
                         return false;
                     }

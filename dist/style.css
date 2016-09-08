@@ -364,8 +364,8 @@ header {
 }
 
 .aboutme .container {
-    padding-top: 85px;
-    padding-bottom: 93px;
+    padding-top: 140px;
+    padding-bottom: 90px;
 }
 
 .aboutCont {
@@ -428,8 +428,8 @@ header {
 }
 
 .technical .container {
-    padding-top: 117px;
-    padding-bottom: 100px;
+    padding-top: 140px;
+    padding-bottom: 90px;
 }
 
 .technical .heading p {
@@ -514,8 +514,8 @@ header {
 }
 
 .exprience .container {
-    padding-top: 116px;
-    padding-bottom: 120px;
+    padding-top: 140px;
+    padding-bottom: 90px;
 }
 
 .exprience h2 {
@@ -631,8 +631,8 @@ header {
 .reffernces {}
 
 .reffernces .container {
-    padding-bottom: 123px;
-    padding-top: 123px;
+    padding-top: 140px;
+    padding-bottom: 90px;
 }
 
 .reffernces h2 {
@@ -695,7 +695,7 @@ header {
 }
 
 .contact .container {
-    padding-top: 50px;
+    padding-top: 140px;
     padding-bottom: 90px;
 }
 
