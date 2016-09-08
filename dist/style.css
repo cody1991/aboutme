@@ -393,7 +393,7 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     border: 3px solid #5b4c5c;
-    padding: 16px 22px;
+    padding: 10px 10px;
     display: inline-block;
     color: #5b4c5c;
     transition-duration: 0.2s;
@@ -973,4 +973,8 @@ h3,
 h4,
 h5 {
     font-family: 'Microsoft YaHei', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
 }
