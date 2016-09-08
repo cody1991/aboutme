@@ -88,9 +88,11 @@ $(document).ready(function(e) {
     if (windowWidth <= 767) {
         $(function() {
             $('a[href*=#]:not([href=#])').click(function() {
+                console.log(1);
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                     if (target.length) {
                         $('html,body').animate({
                             scrollTop: target.offset().top - 30
@@ -103,9 +105,13 @@ $(document).ready(function(e) {
     } else if (windowWidth >= 768) {
         $(function() {
             $('a[href*=#]:not([href=#])').click(function() {
+                console.log(1);
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                    console.log(target)
+
                     if (target.length) {
                         $('html,body').animate({
                             scrollTop: target.offset().top - 140
