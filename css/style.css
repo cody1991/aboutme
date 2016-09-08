@@ -632,6 +632,8 @@ header {
     color: #5b4c5c;
     transition-duration: 0.2s;
     -webkit-transition-duration: 0.2s;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .bntDownload:hover {
@@ -1260,6 +1262,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 
 .refBoxcon p {
+    text-align: justify;
     color: #897f8a;
     font-size: 15px;
     line-height: 27px;
