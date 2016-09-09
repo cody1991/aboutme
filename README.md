@@ -79,7 +79,8 @@ GitHub项目
 
 负责公司随遇直播APP产品内的H5页面，负责公司随遇APP产品H5端的迷你版本，负责公司运营活动页面，比如主要使用Vue.js和vue-resource构建的 [主播生活日记系列](http://a.impingo.me/static/nice/nice14/index.html) 、 [七夕湿身游戏](http://wx.impingo.me/static/iceChallenge/index.html?source_iceChallenge)、 [我是直播歌手投票页面](http://a.impingo.me/static/activity/singer/preselection.html)、 以及PV过百万的 元气校花H5活动 等等。
 
-[元气校花示例页面（已下线）](http://a.impingo.me/activity/showRecommendH5?isFamous=1&openId=o4s3LjjIznRpPupFFoXwem4RD9Hs)
+[元气校花示例页面（已下线）](http://a.impingo.me/activity/showRecommendH5?isFamous=1&openId=o4s3LjjIznRpPupFFoXwem4RD9Hs) | 
+[元气校花示例页面（已下线）](http://a.impingo.me/activity/showRecommend32?isFamous=1&openId=o4s3LjjIznRpPupFFoXwem4RD9Hs#107)
 
 ---
 
