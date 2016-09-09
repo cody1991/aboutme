@@ -69,6 +69,20 @@ GitHub项目
 
 [主页](http://www.impingo.me/homepage/index.html)
 
+---
+
+负责公司随遇直播APP产品内的H5页面，负责公司随遇APP产品H5端的迷你版本，负责公司运营活动页面，比如主要使用Vue.js和vue-resource构建的 [主播生活日记系列](http://a.impingo.me/static/nice/nice14/index.html) 、 [七夕湿身游戏](http://wx.impingo.me/static/iceChallenge/index.html?source_iceChallenge)、 [我是直播歌手投票页面](http://a.impingo.me/static/activity/singer/preselection.html)、 以及PV过百万的 元气校花H5活动 等等。
+
+[元气校花示例页面（已下线）](http://a.impingo.me/activity/showRecommendH5?isFamous=1&openId=o4s3LjjIznRpPupFFoXwem4RD9Hs)
+
+---
+
+负责随遇直播APP产品分享出来的直播页面，主要使用了MediaElement.js、Socket.IO、iScroll 5、Swiper和CSS3动画等技术。兼容PC和移动端，用户可以观看直播，实时获取房间访客列表、用户评论列表和主播信息，也可以进行评论和点赞，与主播互动，观看回播视频。可以进入 [结束页面](http://api.impingo.me/miniSite/liveEndPage?sessionID=7b37cc506c536eea00&sessionToken=e1a15017c5&liveID=94336&userID=1495955&peerID=9728B66C7B326B407E48A61AE53B70DC) ，选择观看热门直播。
+
+[回播页面](http://api.impingo.me/miniSite/livePage?liveID=9311d5a9d)
+
+---
+
 ## License
 The MIT License (MIT)
 
