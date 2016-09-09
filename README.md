@@ -62,6 +62,13 @@ GitHub项目
 
 [项目地址](https://github.com/cody1991/gulp-template)
 
+公司项目
+---
+
+公司官网PC版本和 [移动版本](http://www.impingo.me/homepage/m/index.html) 的构建。使用Gulp.js、CSS3动画和百度地图等技术。
+
+[主页](http://www.impingo.me/homepage/index.html)
+
 ## License
 The MIT License (MIT)
 
